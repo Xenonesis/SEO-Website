@@ -14,7 +14,7 @@ A modern, responsive website for an SEO company built with **HTML**, **CSS (Tail
 
 ## Demo
 
-You can view the live demo of this project here: [Live Demo](https://your-live-demo-link.com)
+You can view the live demo of this project here: [Live Demo](https://seodemobyaddy.netlify.app)
 
 ## Installation
 
