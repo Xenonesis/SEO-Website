@@ -8,11 +8,12 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <!-- Optional: Add Favicon -->
-  <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <!-- Optional: Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@heroicons/vue@2.0.18/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Added for potential icons -->
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body class="bg-gray-50 text-gray-800 antialiased fade-in"> <!-- Added fade-in class -->
 
 <!-- Header Section -->
 <header id="main-header" class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
@@ -65,336 +66,301 @@
 
 <main>
   <!-- Hero Section -->
-  <section id="home" class="bg-gradient-to-br from-indigo-50 via-white to-indigo-50 py-20 md:py-28 fade-in">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center">
-      <div class="md:w-1/2 text-center md:text-left mt-10 md:mt-0 slide-in">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
-          Boost Your Rank & Visibility <span class="text-indigo-600">with Expert SEO</span>
-        </h1>
-        <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
-          Elevate your online presence and dominate search results in Gurgaon. Our tailored SEO strategies drive sustainable growth.
-        </p>
-        <div class="mt-8 flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="contact.html" class="bg-indigo-600 text-white px-8 py-3 rounded-full shadow-lg hover:bg-indigo-700 hover:shadow-xl transition duration-300 transform hover:-translate-y-1 text-lg font-semibold inline-block">
-              Get Free Consultation
-            </a>
-             <a href="services.html" class="bg-white text-indigo-600 border border-indigo-600 px-8 py-3 rounded-full shadow-md hover:bg-gray-50 hover:shadow-lg transition duration-300 transform hover:-translate-y-1 text-lg font-semibold inline-block">
-              Explore Services
-            </a>
+  <section id="home" class="bg-gray-100 py-20 md:py-28 fade-in">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center">
+        <div class="md:w-1/2 text-center md:text-left mt-10 md:mt-0 slide-in">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+            Boost Your Rank & Visibility <span class="text-blue-500">with Expert SEO</span>
+          </h1>
+          <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
+            Elevate your online presence and dominate search results in Gurgaon. Our tailored SEO strategies drive sustainable growth.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                      <a href="contact.html" class="btn-primary !bg-orange-500 !hover:bg-orange-600 text-white px-12 py-5 rounded-full shadow-2xl hover:shadow-xl transform hover:scale-105 transition duration-300 text-2xl font-extrabold flex items-center justify-center space-x-2">
+                        <i class="fas fa-comment-dots"></i><span>Get Free Consultation</span>
+                      </a>
+                       <a href="services.html" class="btn-secondary bg-white text-blue-600 border border-blue-600 px-10 py-4 rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 text-lg font-semibold flex items-center justify-center space-x-2">
+                        <span>Explore Services</span><i class="fas fa-arrow-right"></i>
+                      </a>
+                  </div>
         </div>
-      </div>
-      <div class="md:w-1/2 slide-in">
-        <img src="images/hero-laptop-placeholder.svg" alt="SEO analysis illustration" class="mx-auto w-full max-w-lg rounded-lg bg-gray-200">
-         <!-- Replace with actual hero image: <img src="images/hero-laptop.png" ... > -->
-      </div>
-    </div>
-  </section>
+          <div class="md:w/12 slide-in">
+            <img src="images/hero-laptop.png" alt="SEO analysis illustration" class="mx-auto w-full max-w-lg rounded-lg animate-pulse">
+          </div>
+        </div>
+    </section>
 
   <!-- Milestone Section -->
-  <section id="milestones" class="bg-white py-16 md:py-24 slide-in">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Milestones Achieved</h2>
-        <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            Proven results demonstrating our impact in the SEO industry over the years.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-            <!-- Card 1: Traffic Generated -->
-            <div class="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-200">
-                 <div class="text-indigo-500 text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
-                <h3 class="text-4xl font-bold text-indigo-600 mb-3">200M+</h3>
-                <p class="text-xl font-semibold text-gray-700 mb-3">
-                    Traffic Generated
-                </p>
-                <p class="text-gray-500">
-                    Driving significant visibility and engagement across diverse client portfolios.
-                </p>
-            </div>
-            <!-- Card 2: Avg Time Increased -->
-            <div class="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-200">
-                 <div class="text-indigo-500 text-4xl mb-4"><i class="fas fa-clock"></i></div>
-                <h3 class="text-4xl font-bold text-indigo-600 mb-3">50%+</h3>
-                <p class="text-xl font-semibold text-gray-700 mb-3">
-                    Avg. Time On Site Increase
-                </p>
-                <p class="text-gray-500">
-                    Enhancing user engagement leading to longer, more valuable sessions.
-                </p>
-            </div>
-            <!-- Card 3: Top Traffic Keywords -->
-            <div class="p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-200">
-                 <div class="text-indigo-500 text-4xl mb-4"><i class="fas fa-key"></i></div>
-                <h3 class="text-4xl font-bold text-indigo-600 mb-3">10k+</h3>
-                <p class="text-xl font-semibold text-gray-700 mb-3">
-                    Keywords in Top 10
-                </p>
-                <p class="text-gray-500">
-                    Achieving high rankings for competitive keywords across various markets.
-                </p>
-            </div>
-        </div>
-    </div>
+  <section id="milestones" class="bg-gray-100 py-16 md:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-white shadow-xl rounded-2xl overflow-hidden">
+              <div class="px-6 py-12 md:px-12 md:py-24 text-center">
+                  <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Impact by Numbers</h2>
+                  <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+                      We've driven significant growth and achieved remarkable milestones for our clients.
+                  </p>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                      <!-- Milestone 1 -->
+                      <div class="milestone-item">
+                          <div class="text-blue-500 text-5xl mb-4"><i class="fas fa-chart-line"></i></div>
+                          <h3 class="text-4xl font-bold text-blue-600 milestone-number">200M+</h3>
+                          <p class="text-gray-700 font-semibold milestone-text">Traffic Generated</p>
+                          <p class="text-gray-500">Across diverse client portfolios</p>
+                      </div>
+                      <!-- Milestone 2 -->
+                      <div class="milestone-item">
+                          <div class="text-blue-500 text-5xl mb-4"><i class="fas fa-clock"></i></div>
+                          <h3 class="text-4xl font-bold text-blue-600 milestone-number">50%+</h3>
+                          <p class="text-gray-700 font-semibold milestone-text">Avg. Time On Site Increase</p>
+                          <p class="text-gray-500">Enhanced user engagement</p>
+                      </div>
+                      <!-- Milestone 3 -->
+                      <div class="milestone-item">
+                          <div class="text-blue-500 text-5xl mb-4"><i class="fas fa-key"></i></div>
+                          <h3 class="text-4xl font-bold text-blue-600 milestone-number">10k+</h3>
+                          <p class="text-gray-700 font-semibold milestone-text">Keywords in Top 10</p>
+                          <p class="text-gray-500">High rankings in competitive markets</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
   </section>
 
 
   <!-- Why You Should Hire Us Section -->
-  <section class="bg-gray-100 py-16 md:py-24 fade-in">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4">Why Choose Our SEO Expertise?</h2>
-        <p class="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            We deliver tailored solutions, data-driven strategies, and transparent reporting to ensure your business achieves sustainable online growth in Gurgaon.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:-translate-y-2">
-                <div class="flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-full h-16 w-16 mx-auto mb-6">
-                    <i class="fas fa-bullseye text-3xl"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">Result-Driven Strategies</h3>
-                <p class="text-gray-600">
-                    Our focus is on delivering measurable results that align with your business goals and drive tangible growth.
-                </p>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:-translate-y-2">
-                 <div class="flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-full h-16 w-16 mx-auto mb-6">
-                     <i class="fas fa-cogs text-3xl"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">Tailored SEO Solutions</h3>
-                <p class="text-gray-600">
-                    We design custom SEO strategies that cater precisely to your unique business needs and market position.
-                </p>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:-translate-y-2">
-                 <div class="flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-full h-16 w-16 mx-auto mb-6">
-                     <i class="fas fa-users text-3xl"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">Experienced Team</h3>
-                <p class="text-gray-600">
-                    Our team of dedicated SEO professionals brings years of expertise and cutting-edge techniques.
-                </p>
-            </div>
-        </div>
-    </div>
+  <section id="why-choose-us" class="bg-white py-16 md:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-8">Why Choose Us?</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- Feature 1 -->
+              <div class="feature-card bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div class="icon-wrapper bg-blue-100 text-blue-500 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                      <i class="fas fa-rocket"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-2">Data-Driven Strategies</h3>
+                  <p class="text-gray-600">We leverage in-depth analytics to craft SEO strategies that deliver measurable results and maximize your ROI.</p>
+              </div>
+  
+              <!-- Feature 2 -->
+              <div class="feature-card bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div class="icon-wrapper bg-blue-100 text-blue-500 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                      <i class="fas fa-search-plus"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-2">Comprehensive SEO Audit</h3>
+                  <p class="text-gray-600">We conduct thorough site audits to identify opportunities and areas for improvement in your SEO strategy.</p>
+              </div>
+  
+              <!-- Feature 3 -->
+              <div class="feature-card bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div class="icon-wrapper bg-blue-100 text-blue-500 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                      <i class="fas fa-users"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-2">Dedicated Support Team</h3>
+                  <p class="text-gray-600">Our expert team provides ongoing support and communication, ensuring your SEO goals are met with personalized attention.</p>
+              </div>
+          </div>
+      </div>
   </section>
 
   <!-- Growth Hackers / Services Overview Section -->
-  <section class="bg-white py-16 md:py-24 fade-in">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Comprehensive SEO Services</h2>
-       <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-            Leveraging advanced SEO marketing skills to fuel your business growth across all fronts.
+  <section id="services-overview" class="bg-gray-100 py-20 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-8">Explore Our SEO Services</h2>
+        <p class="text-lg text-gray-600 text-center mb-16 max-w-3xl mx-auto">
+            Boost your online visibility and drive organic growth with our comprehensive suite of SEO services.
         </p>
-      <div class="flex flex-wrap justify-center gap-3 md:gap-4">
-        <span class="bg-indigo-100 text-indigo-700 px-5 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-indigo-200 transition duration-200 cursor-default">National SEO</span>
-        <span class="bg-indigo-100 text-indigo-700 px-5 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-indigo-200 transition duration-200 cursor-default">International SEO</span>
-        <span class="bg-indigo-100 text-indigo-700 px-5 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-indigo-200 transition duration-200 cursor-default">Local SEO</span>
-        <span class="bg-indigo-100 text-indigo-700 px-5 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-indigo-200 transition duration-200 cursor-default">E-commerce SEO</span>
-        <span class="bg-indigo-100 text-indigo-700 px-5 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-indigo-200 transition duration-200 cursor-default">On-Page SEO</span>
-        <span class="bg-indigo-100 text-indigo-700 px-5 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-indigo-200 transition duration-200 cursor-default">Off-Page SEO</span>
-         <span class="bg-indigo-100 text-indigo-700 px-5 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-indigo-200 transition duration-200 cursor-default">Technical SEO</span>
-         <span class="bg-indigo-100 text-indigo-700 px-5 py-2 rounded-full text-sm font-medium shadow-sm hover:bg-indigo-200 transition duration-200 cursor-default">Content Marketing</span>
-      </div>
-       <div class="mt-12">
-            <a href="services.html" class="text-indigo-600 hover:text-indigo-800 font-semibold transition duration-300">
-                Learn More About Our Services &rarr;
-            </a>
-        </div>
-    </div>
-  </section>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Service 1 -->
+            <div class="service-card bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+                <div class="icon-wrapper bg-blue-100 text-blue-500 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-search-dollar"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Keyword Research</h3>
+                <p class="text-gray-600">Identify high-value keywords to target for better search rankings and relevant traffic.</p>
+            </div>
 
-  <!-- Partner Tools Section -->
-  <section class="bg-gray-100 py-16 md:py-24 slide-in">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technology & Tools We Trust</h2>
-      <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-        We utilize industry-leading tools and platforms to ensure data accuracy and deliver top-tier SEO results.
-      </p>
-      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
-        <!-- Add group class for hover effect -->
-        <div class="partner-card group opacity-70 hover:opacity-100 transition-opacity duration-300">
-          <img src="images/moz-placeholder.svg" alt="MOZ Logo" class="h-10 md:h-12 mx-auto filter grayscale group-hover:grayscale-0 transition duration-300 bg-gray-300 p-1 rounded"> <!-- Placeholder -->
-        </div>
-        <div class="partner-card group opacity-70 hover:opacity-100 transition-opacity duration-300">
-          <img src="images/ahrefs-placeholder.svg" alt="Ahrefs Logo" class="h-10 md:h-12 mx-auto filter grayscale group-hover:grayscale-0 transition duration-300 bg-gray-300 p-1 rounded"> <!-- Placeholder -->
-        </div>
-        <div class="partner-card group opacity-70 hover:opacity-100 transition-opacity duration-300">
-          <img src="images/semrush-placeholder.svg" alt="SEMrush Logo" class="h-10 md:h-12 mx-auto filter grayscale group-hover:grayscale-0 transition duration-300 bg-gray-300 p-1 rounded"> <!-- Placeholder -->
-        </div>
-        <div class="partner-card group opacity-70 hover:opacity-100 transition-opacity duration-300">
-          <img src="images/gsc-placeholder.svg" alt="Google Search Console Logo" class="h-10 md:h-12 mx-auto filter grayscale group-hover:grayscale-0 transition duration-300 bg-gray-300 p-1 rounded"> <!-- Placeholder -->
-        </div>
-         <div class="partner-card group opacity-70 hover:opacity-100 transition-opacity duration-300">
-          <img src="images/ga-placeholder.svg" alt="Google Analytics Logo" class="h-10 md:h-12 mx-auto filter grayscale group-hover:grayscale-0 transition duration-300 bg-gray-300 p-1 rounded"> <!-- Placeholder -->
-        </div>
-      </div>
-    </div>
-  </section>
+            <!-- Service 2 -->
+            <div class="service-card bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+                <div class="icon-wrapper bg-blue-100 text-blue-500 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">On-Page Optimization</h3>
+                <p class="text-gray-600">Optimize your website content and structure to improve search engine crawlability and relevance.</p>
+            </div>
 
+            <!-- Service 3 -->
+            <div class="service-card bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+                <div class="icon-wrapper bg-blue-100 text-blue-500 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-link"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Link Building</h3>
+                <p class="text-gray-600">Acquire high-quality backlinks to boost your website's authority and improve search engine rankings.</p>
+            </div>
 
-  <!-- FAQ Section -->
-  <section class="bg-white py-16 md:py-24 fade-in">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4">Frequently Asked Questions</h2>
-      <p class="text-lg text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-        Got questions? We've got answers. Find clarity on common queries about our SEO services in Gurgaon.
-      </p>
-      <div class="space-y-6" id="faq-accordion">
-        <!-- FAQ Item 1 -->
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 overflow-hidden">
-          <button class="faq-toggle w-full text-left flex justify-between items-center focus:outline-none group">
-            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-200">Why should I hire an SEO agency for my business?</h3>
-            <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-content mt-4 text-gray-600 hidden transition-all duration-500 ease-in-out max-h-0 opacity-0">
-            <p class="pt-4 border-t border-gray-200">
-              An expert SEO agency brings specialized knowledge, advanced tools, and dedicated resources to significantly improve your website's ranking and online visibility. They stay updated on algorithm changes and implement proven strategies for sustainable growth, freeing up your time to focus on core business operations.
-            </p>
-          </div>
-        </div>
-        <!-- FAQ Item 2 -->
-         <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 overflow-hidden">
-          <button class="faq-toggle w-full text-left flex justify-between items-center focus:outline-none group">
-            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-200">How does SEO improve my business in Gurgaon?</h3>
-            <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-content mt-4 text-gray-600 hidden transition-all duration-500 ease-in-out max-h-0 opacity-0">
-            <p class="pt-4 border-t border-gray-200">
-              Effective SEO increases your website's visibility in search engine results for relevant queries made by people in and around Gurgaon. This drives qualified organic traffic (visitors actively looking for your products/services locally), enhances brand credibility, improves user experience, and ultimately leads to higher conversions and revenue from your target market.
-            </p>
-          </div>
-        </div>
-        <!-- FAQ Item 3 -->
-         <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 overflow-hidden">
-          <button class="faq-toggle w-full text-left flex justify-between items-center focus:outline-none group">
-            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-200">What are the key benefits of investing in SEO?</h3>
-            <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-content mt-4 text-gray-600 hidden transition-all duration-500 ease-in-out max-h-0 opacity-0">
-             <p class="pt-4 border-t border-gray-200">
-              Key benefits include increased organic traffic, improved search rankings (especially locally), enhanced brand awareness and authority, better user experience, higher ROI compared to paid ads in the long run, and valuable insights into customer behavior through analytics.
-            </p>
-          </div>
-        </div>
-        <!-- FAQ Item 4 -->
-         <div class="bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 overflow-hidden">
-          <button class="faq-toggle w-full text-left flex justify-between items-center focus:outline-none group">
-            <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition-colors duration-200">How long does it take to see results from SEO?</h3>
-            <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="faq-content mt-4 text-gray-600 hidden transition-all duration-500 ease-in-out max-h-0 opacity-0">
-            <p class="pt-4 border-t border-gray-200">
-              SEO is a long-term strategy. While initial improvements might be seen within 3-4 months (like better indexing or technical fixes), significant results in terms of traffic and rankings typically take 6-12 months. The timeline depends on factors like competition in the Gurgaon market, website history, and the scope of the strategy.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-   <!-- Contact CTA Section -->
-   <section id="contact-cta" class="bg-indigo-700 py-16 md:py-24 text-white fade-in">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Grow Your Business in Gurgaon?</h2>
-            <p class="text-lg text-indigo-100 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our tailored SEO strategies can help you achieve your online goals. Get in touch for a free consultation today.
-            </p>
-            <a href="contact.html" class="bg-white text-indigo-600 px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-1 text-lg font-semibold inline-block">
-                Request a Free Quote
-            </a>
-             <p class="mt-6 text-indigo-200">Or call us: <a href="tel:+911234567890" class="font-semibold hover:underline">+91 12345 67890</a></p> <!-- Replace with actual phone -->
-        </div>
-    </section>
-
-</main>
-
-<!-- Footer Section -->
-<footer class="bg-gray-900 text-gray-300 py-12 md:py-16 fade-in">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-      <!-- Company Info -->
-      <div>
-        <img src="images/logo-white-placeholder.svg" alt="Company Logo White" class="h-10 mb-4 bg-gray-700 p-1 rounded"> <!-- Placeholder -->
-        <p class="text-sm mb-3">1234 Main St, Gurgaon, Haryana, India</p> <!-- Replace -->
-        <p class="text-sm mb-1"><a href="tel:+911234567890" class="hover:text-indigo-400 transition-colors duration-300">+91 12345 67890</a></p> <!-- Replace -->
-        <p class="text-sm"><a href="mailto:info@seocompany.com" class="hover:text-indigo-400 transition-colors duration-300">info@seocompany.com</a></p> <!-- Replace -->
-      </div>
-
-      <!-- Our Services -->
-      <div>
-        <h3 class="text-lg font-semibold text-white mb-4">Our Services</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="services.html#keyword" class="hover:text-indigo-400 transition-colors duration-300">Keyword Research</a></li>
-          <li><a href="services.html#onpage" class="hover:text-indigo-400 transition-colors duration-300">On-Page SEO</a></li>
-          <li><a href="services.html#offpage" class="hover:text-indigo-400 transition-colors duration-300">Off-Page SEO</a></li>
-          <li><a href="services.html#technical" class="hover:text-indigo-400 transition-colors duration-300">Technical SEO</a></li>
-           <li><a href="services.html#local" class="hover:text-indigo-400 transition-colors duration-300">Local SEO</a></li>
-           <li><a href="services.html#content" class="hover:text-indigo-400 transition-colors duration-300">Content Marketing</a></li>
-        </ul>
-      </div>
-
-      <!-- Quick Links -->
-      <div>
-        <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="index.html" class="hover:text-indigo-400 transition-colors duration-300">Home</a></li>
-          <li><a href="services.html" class="hover:text-indigo-400 transition-colors duration-300">Services</a></li>
-          <li><a href="about.html" class="hover:text-indigo-400 transition-colors duration-300">About Us</a></li>
-          <li><a href="case-study.html" class="hover:text-indigo-400 transition-colors duration-300">Case Studies</a></li>
-          <li><a href="testimonials.html" class="hover:text-indigo-400 transition-colors duration-300">Testimonials</a></li>
-          <li><a href="blog.html" class="hover:text-indigo-400 transition-colors duration-300">Blog</a></li>
-          <li><a href="contact.html" class="hover:text-indigo-400 transition-colors duration-300">Contact Us</a></li>
-        </ul>
-      </div>
-
-       <!-- Legal & Social -->
-        <div>
-            <h3 class="text-lg font-semibold text-white mb-4">Connect & Legal</h3>
-            <ul class="space-y-2 text-sm mb-6">
-                <li><a href="privacy-policy.html" class="hover:text-indigo-400 transition-colors duration-300">Privacy Policy</a></li>
-                <li><a href="terms-conditions.html" class="hover:text-indigo-400 transition-colors duration-300">Terms & Conditions</a></li>
-            </ul>
-             <div class="flex space-x-4">
-                <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
-                    <i class="fab fa-facebook-f text-xl"></i>
-                </a>
-                <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
-                     <i class="fab fa-twitter text-xl"></i>
-                </a>
-                <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
-                    <i class="fab fa-linkedin-in text-xl"></i>
-                </a>
-                 <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300">
-                    <i class="fab fa-instagram text-xl"></i>
-                </a>
+            <!-- Service 4 -->
+            <div class="service-card bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+                <div class="icon-wrapper bg-blue-100 text-blue-500 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Technical SEO</h3>
+                <p class="text-gray-600">Improve your website’s technical aspects to enhance user experience and search engine efficiency.</p>
             </div>
         </div>
+        <div class="mt-12 text-center">
+            <a href="services.html" class="btn-primary">View All Services</a>
+        </div>
     </div>
+</section>
 
-    <!-- Google Map -->
-    <div class="mt-10 mb-10 border-t border-gray-700 pt-10">
-       <h3 class="text-lg font-semibold text-white mb-4 text-center">Our Location</h3>
-      <div class="aspect-w-16 aspect-h-6 rounded-lg overflow-hidden shadow-lg">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.677288936878!2d77.0266381239203!3d28.45949696874769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d191fd6b91d2f%3A0xc1a750b04d1f1676!2sGurgaon%2C%20Haryana%2C%20India!5e0!3m2!1sen!2sus!4v1628517877173!5m2!1sen!2sus"
-          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map Location"></iframe>
+  <!-- Partner Tools Section -->
+  <section id="tools-tech" class="bg-white py-16 md:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Our SEO Toolkit</h2>
+          <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+              We leverage cutting-edge SEO tools and technologies to ensure optimal performance and data-driven results for our clients.
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              <!-- Tool 1 -->
+              <div class="tool-item bg-gray-50 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <img src="images/ahrefs-new.png" alt="Ahrefs" class="h-8 mx-auto grayscale hover:grayscale-0 transition-all duration-300">
+                  <p class="text-sm font-semibold text-gray-700 mt-2">Ahrefs</p>
+              </div>
+              <!-- Tool 2 -->
+              <div class="tool-item bg-gray-50 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <img src="images/semrush-new.png" alt="SEMrush" class="h-8 mx-auto grayscale hover:grayscale-0 transition-all duration-300">
+                   <p class="text-sm font-semibold text-gray-700 mt-2">SEMrush</p>
+              </div>
+              <!-- Tool 3 -->
+              <div class="tool-item bg-gray-50 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <img src="images/moz-new.png" alt="Moz" class="h-8 mx-auto grayscale hover:grayscale-0 transition-all duration-300">
+                   <p class="text-sm font-semibold text-gray-700 mt-2">Moz</p>
+              </div>
+              <!-- Tool 4 -->
+              <div class="tool-item bg-gray-50 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <img src="images/gsc-new.png" alt="Google Search Console" class="h-8 mx-auto grayscale hover:grayscale-0 transition-all duration-300">
+                   <p class="text-sm font-semibold text-gray-700 mt-2">GSC</p>
+              </div>
+              <!-- Tool 5 -->
+              <div class="tool-item bg-gray-50 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <img src="images/ga-new.png" alt="Google Analytics" class="h-8 mx-auto grayscale hover:grayscale-0 transition-all duration-300">
+                   <p class="text-sm font-semibold text-gray-700 mt-2">GA</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="bg-gray-100 py-20 md:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+          <div class="faq-grid grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div class="faq-column">
+                  <!-- FAQ Item 1 -->
+                  <div class="faq-item">
+                      <button class="faq-question text-xl font-semibold text-gray-800 w-full text-left py-2 focus:outline-none">
+                          Q: What is SEO and why is it important?
+                      </button>
+                      <div class="faq-answer text-gray-600 hidden">
+                          <p>SEO, or Search Engine Optimization, is crucial for enhancing your website's visibility on search engines like Google. It helps drive organic traffic by improving rankings, ensuring your site appears when potential customers search for relevant terms. Higher visibility leads to increased brand awareness, targeted traffic, and ultimately, better conversion rates.</p>
+                      </div>
+                  </div>
+  
+                  <!-- FAQ Item 2 -->
+                  <div class="faq-item">
+                      <button class="faq-question text-xl font-semibold text-gray-800 w-full text-left py-2 focus:outline-none">
+                          Q: How long does it take to see SEO results?
+                      </button>
+                      <div class="faq-answer text-gray-600 hidden">
+                          <p>The timeline for seeing SEO results varies, but typically, you might start seeing initial improvements within 3 to 6 months. Significant results, especially for competitive keywords, can take 6 to 12 months. SEO is a long-term strategy focused on sustainable growth, not overnight success.</p>
+                      </div>
+                  </div>
+  
+                  <!-- FAQ Item 3 -->
+                  <div class="faq-item">
+                      <button class="faq-question text-xl font-semibold text-gray-800 w-full text-left py-2 focus:outline-none">
+                          Q: What's included in your SEO services?
+                      </button>
+                      <div class="faq-answer text-gray-600 hidden">
+                          <p>Our SEO services are comprehensive, covering on-page and off-page optimization, keyword research, content strategy, technical SEO, and detailed analytics reporting. We tailor strategies to align with your business goals, ensuring a holistic approach to improve your online presence and search engine rankings.</p>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="faq-column">
+                  <!-- FAQ Item 4 -->
+                  <div class="faq-item">
+                      <button class="faq-question text-xl font-semibold text-gray-800 w-full text-left py-2 focus:outline-none">
+                          Q: How much will SEO services cost?
+                      </button>
+                      <div class="faq-answer text-gray-600 hidden">
+                          <p>SEO costs depend on various factors, including the competitiveness of your industry, the scope of work, and your specific business needs. We offer customized packages to fit different budgets and objectives. Contact us for a personalized quote and let's discuss how we can help you achieve your SEO goals.</p>
+                      </div>
+                  </div>
+  
+                  <!-- FAQ Item 5 -->
+                  <div class="faq-item">
+                      <button class="faq-question text-xl font-semibold text-gray-800 w-full text-left py-2 focus:outline-none">
+                          Q: Do you guarantee first-page rankings?
+                      </button>
+                      <div class="faq-answer text-gray-600 hidden">
+                          <p>While we cannot guarantee first-page rankings due to the dynamic nature of search engine algorithms, our goal is to significantly improve your website's ranking and organic traffic. We employ proven SEO techniques and continuously adapt our strategies to maximize your visibility and achieve the highest possible rankings.</p>
+                      </div>
+   </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-12 md:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Column 1: About Us -->
+        <div class="footer-col">
+          <h4 class="text-white font-semibold mb-4">About Us</h4>
+          <p class="text-sm">We are a leading SEO company in Gurgaon, dedicated to helping businesses grow online through effective and ethical SEO strategies.</p>
+        </div>
+
+        <!-- Column 2: Services -->
+        <div class="footer-col">
+          <h4 class="text-white font-semibold mb-4">Our Services</h4>
+          <ul class="text-sm">
+            <li><a href="services.html" class="hover:text-blue-300 transition-colors duration-200 block py-1">SEO Services</a></li>
+            <li><a href="services.html" class="hover:text-blue-300 transition-colors duration-200 block py-1">Local SEO</a></li>
+            <li><a href="services.html" class="hover:text-blue-300 transition-colors duration-200 block py-1">E-commerce SEO</a></li>
+            <li><a href="services.html" class="hover:text-blue-300 transition-colors duration-200 block py-1">Content Marketing</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="footer-col">
+          <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+          <ul class="text-sm">
+            <li><a href="about.html" class="hover:text-blue-300 transition-colors duration-200 block py-1">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-blue-300 transition-colors duration-200 block py-1">Contact Us</a></li>
+            <li><a href="blog.html" class="hover:text-blue-300 transition-colors duration-200 block py-1">Blog</a></li>
+            <li><a href="testimonials.html" class="hover:text-blue-300 transition-colors duration-200 block py-1">Testimonials</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Connect with Us -->
+        <div class="footer-col">
+          <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-blue-300 transition-colors duration-200"><i class="fab fa-facebook-square fa-lg"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-300 transition-colors duration-200"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-300 transition-colors duration-200"><i class="fab fa-linkedin fa-lg"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom mt-10 pt-6 border-t border-gray-700 text-center">
+        <p class="text-sm">© 2025 SEO Company Gurgaon. All rights reserved.</p>
       </div>
     </div>
+  </footer>
 
-    <!-- Copyright -->
-    <div class="mt-10 text-center text-sm text-gray-500 border-t border-gray-700 pt-8">
-      <p>&copy; <span id="current-year"></span> SEO Company Gurgaon. All rights reserved. Designed & Developed with ❤️.</p>
-    </div>
-  </div>
-</footer>
-
-<script src="js/script.js"></script>
-<!-- Include Font Awesome -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Replace with your kit or CDN link -->
+</div>
 </body>
 </html>
+                  

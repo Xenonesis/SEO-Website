@@ -1,10 +1,32 @@
+// --- Header Scroll Effect ---
+const header = document.getElementById('main-header');
+const scrollThreshold = 50; // Pixels to scroll before changing header
+
+if (header) {
+    const handleScroll = () => {
+        if (window.scrollY > scrollThreshold) {
+            document.body.classList.add('scrolled');
+        } else {
+            document.body.classList.remove('scrolled');
+        }
+    };
+
+    // Initial check in case the page loads already scrolled
+    handleScroll();
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll, { passive: true }); // Use passive listener for performance
+} else {
+    console.warn('Main header element not found for scroll effect.');
+}
+
 // --- FAQ Accordion ---
-const faqItems = document.querySelectorAll('.bg-gray-50.p-6.rounded-lg'); // Updated selector for FAQ container
+const faqItems = document.querySelectorAll('.bg-gray-50.p-6.rounded-lg.shadow-md'); // Updated selector for FAQ container
 
 faqItems.forEach(item => {
   const button = item.querySelector('button');
-  // Select the div that is a direct child of the item and is not the button's parent (more robust)
-  const answerDiv = item.querySelector(':scope > div:not(:has(button))');
+  // Select the answer div using the faq-content class
+  const answerDiv = item.querySelector('.faq-content');
   const icon = button ? button.querySelector('svg') : null; // Check if button exists before querying icon
 
   if (button && answerDiv && icon) { // Ensure all elements exist
@@ -161,4 +183,40 @@ window.addEventListener('load', () => {
         }
     }, 1000); // Slightly longer than animation
   }
+});
+
+// --- Scroll-Triggered Animations ---
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+    if (!animatedElements.length) {
+        console.log("No elements found with the 'animate-on-scroll' class.");
+        return; // Exit if no elements to animate
+    }
+
+    const observerOptions = {
+        root: null, // Use the viewport as the root
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    };
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Optional: Unobserve after animation to save resources
+                // observer.unobserve(entry.target);
+            }
+            // Optional: Remove class if element scrolls out of view (for re-animation)
+            // else {
+            //     entry.target.classList.remove('is-visible');
+            // }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
 });

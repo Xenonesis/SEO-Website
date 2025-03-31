@@ -23,9 +23,39 @@ body {
     animation: slideIn 0.8s ease-out forwards;
 }
 
+/* Scroll-Triggered Animation Base Styles */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+    /* Default starting position (can be overridden by specific animation classes) */
+    transform: translateY(20px);
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: Add variations using existing keyframes or new ones */
+/*
+.animate-on-scroll.fade-in-only {
+    transform: none; // Override default translate
+}
+.animate-on-scroll.slide-from-left {
+    transform: translateX(-30px);
+}
+.animate-on-scroll.slide-from-left.is-visible {
+    transform: translateX(0);
+}
+*/
+
 /* Header Styles */
 #main-header {
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+body.scrolled #main-header {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 /* Optional: Add a subtle background change on scroll */
 /*
@@ -34,13 +64,31 @@ body.scrolled #main-header {
 }
 */
 
+
 /* Desktop Navigation Link Styles */
 nav.hidden.md\:flex a {
-    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-    padding-bottom: 4px; /* Adjust as needed */
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+    transition: color 0.3s ease-in-out;
+    padding-bottom: 6px; /* Increased padding for underline space */
+    text-decoration: none; /* Remove default underline */
 }
 
-/* Mobile Menu Styles */
+nav.hidden.md\:flex a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* Start with no width */
+    height: 2px; /* Underline thickness */
+    background-color: currentColor; /* Use the link's current color */
+    transition: width 0.3s ease-in-out; /* Animate the width */
+}
+
+nav.hidden.md\:flex a:hover::after,
+nav.hidden.md\:flex a:focus::after { /* Also apply on focus */
+    width: 100%; /* Expand width on hover/focus */
+}
+
 #mobile-menu {
     transition: max-height 0.5s ease-in-out; /* Smooth height transition */
 }
@@ -50,10 +98,10 @@ nav.hidden.md\:flex a {
 
 /* Button Styles (Refined) */
 .btn-primary { /* Example class if needed, Tailwind classes preferred */
-    @apply bg-indigo-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-indigo-700 hover:shadow-lg transition duration-300 transform hover:-translate-y-0.5 text-lg font-semibold inline-block;
+    @apply bg-indigo-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-indigo-700 hover:shadow-lg transition duration-300 transform hover:scale-105 text-lg font-semibold inline-block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500; /* Added focus states */
 }
 .btn-secondary { /* Example class */
-     @apply bg-white text-indigo-600 border border-indigo-600 px-6 py-3 rounded-full shadow-md hover:bg-gray-50 hover:shadow-lg transition duration-300 transform hover:-translate-y-0.5 text-lg font-semibold inline-block;
+     @apply bg-white text-indigo-600 border border-indigo-600 px-6 py-3 rounded-full shadow-md hover:bg-gray-50 hover:shadow-lg transition duration-300 transform hover:scale-105 text-lg font-semibold inline-block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500; /* Added focus states */
 }
 
 
@@ -62,7 +110,7 @@ nav.hidden.md\:flex a {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .hover-card-effect:hover {
-    transform: translateY(-5px);
+    transform: scale(1.03); /* Slightly more subtle scale */
     @apply shadow-xl; /* Use Tailwind's shadow scale */
 }
 
@@ -71,7 +119,10 @@ nav.hidden.md\:flex a {
     @apply p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-200 text-center;
 }
 .milestone-number { /* Example */
-    @apply text-4xl font-bold text-indigo-600 mb-3;
+    @apply text-5xl font-bold text-indigo-600 mb-3 transition-transform duration-300;
+}
+.milestone-number:hover {
+    transform: scale(1.1);
 }
 .milestone-text { /* Example */
     @apply text-xl font-semibold text-gray-700 mb-3;
@@ -84,22 +135,24 @@ nav.hidden.md\:flex a {
 
 /* Partner Logo Styles */
 .partner-card img {
-    transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     filter: grayscale(100%);
     opacity: 0.7;
 }
 .partner-card:hover img {
     filter: grayscale(0%);
     opacity: 1;
+    transform: scale(1.1);
 }
 
 /* FAQ Section Styles */
 .faq-item button svg {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 /* Rotate icon based on aria-expanded state */
 .faq-item button[aria-expanded="true"] svg {
     transform: rotate(180deg);
+    color: #6366f1;
 }
 .faq-item div[hidden] {
     display: none; /* Ensure hidden initially */
@@ -123,16 +176,16 @@ nav.hidden.md\:flex a {
 
 /* Footer Styles */
 footer a {
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 footer a:hover {
-    @apply text-indigo-400;
+    @apply text-indigo-400 transform scale(1.05);
 }
 footer .social-icon svg { /* If you wrap social icons */
      transition: transform 0.3s ease-in-out;
 }
 footer .social-icon:hover svg {
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-2px);
 }
 
 /* Responsive Adjustments (Tailwind handles most) */
