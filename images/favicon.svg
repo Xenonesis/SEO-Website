@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="16" cy="16" r="15" fill="#4f46e5" />
+  
+  <!-- Magnifying Glass -->
+  <g transform="translate(8, 8) scale(0.5)">
+    <!-- Handle -->
+    <rect x="20" y="20" width="16" height="5" rx="2" fill="white" transform="rotate(45, 28, 22.5)" />
+    
+    <!-- Glass -->
+    <circle cx="12" cy="12" r="10" fill="none" stroke="white" stroke-width="4" />
+  </g>
+</svg>
