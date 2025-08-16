@@ -7,37 +7,41 @@
     <meta name="description" content="Stay updated with the latest SEO trends, tips, and insights from the experts at our Gurgaon-based SEO company. Read our blog for valuable information.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Optional: Add Favicon -->
-    <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body class="bg-gray-100 text-gray-800 antialiased fade-in"> <!-- Added fade-in class -->
+<body class="antialiased fade-in"> <!-- Using theme variables -->
 
     <!-- Header Section -->
-    <header id="main-header" class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
+    <header id="main-header" class="bg-header shadow-md sticky top-0 z-50 transition-all duration-300">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
         <!-- Logo -->
         <div class="flex-shrink-0">
           <a href="index.html" class="block group">
-            <img src="images/logo.png" alt="Company Logo" class="h-10 md:h-12 transition-transform duration-300 group-hover:scale-105">
+            <img src="images/logo.svg" alt="SEO Solutions Logo" class="h-10 md:h-12 transition-transform duration-300 group-hover:scale-105">
           </a>
         </div>
 
         <!-- Navigation Links for Desktop -->
-        <nav class="hidden md:flex items-center space-x-6 text-gray-700">
-          <a href="index.html" class="font-medium transition-colors duration-300 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 pb-1">Home</a>
-          <a href="services.html" class="font-medium transition-colors duration-300 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 pb-1">Services</a>
-          <a href="about.html" class="font-medium transition-colors duration-300 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 pb-1">About</a>
-          <a href="case-study.html" class="font-medium transition-colors duration-300 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 pb-1">Case Study</a>
-          <a href="testimonials.html" class="font-medium transition-colors duration-300 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 pb-1">Testimonials</a>
-          <a href="blog.html" class="font-medium transition-colors duration-300 hover:text-indigo-600 border-b-2 border-indigo-600 pb-1">Blog</a> <!-- Active Link Style -->
-          <a href="contact.html" class="ml-4 bg-indigo-600 text-white px-5 py-2 rounded-full shadow-md hover:bg-indigo-700 hover:shadow-lg transition duration-300 transform hover:-translate-y-0.5">
+        <nav class="hidden md:flex items-center space-x-6 desktop-nav">
+          <a href="index.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">Home</a>
+          <a href="services.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">Services</a>
+          <a href="about.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">About</a>
+          <a href="case-study.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">Case Study</a>
+          <a href="testimonials.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">Testimonials</a>
+          <a href="blog.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-primary pb-1 nav-link">Blog</a> <!-- Active Link Style -->
+          <!-- Theme toggle will be inserted here by theme.js -->
+          <a href="contact.html" class="ml-4 px-6 py-2.5 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-1 hover:shadow-xl btn-primary text-white font-semibold">
             Contact Us
           </a>
         </nav>
 
         <!-- Mobile Menu Button -->
         <div class="md:hidden flex items-center">
-          <button id="menu-toggle" class="focus:outline-none p-2 rounded-md text-gray-600 hover:text-indigo-600 hover:bg-gray-100 transition duration-300">
+          <button type="button" id="menu-toggle" aria-label="Toggle mobile menu" class="focus:outline-none p-2 rounded-md transition duration-300 menu-toggle-btn">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
@@ -46,95 +50,108 @@
       </div>
 
       <!-- Mobile Navigation Menu -->
-      <nav id="mobile-menu" class="md:hidden bg-white shadow-lg overflow-hidden max-h-0 transition-all duration-500 ease-in-out hidden">
+      <nav id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out hidden">
         <div class="px-4 pt-2 pb-4 space-y-1">
-          <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-150">Home</a>
-          <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-150">Services</a>
-          <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-150">About</a>
-          <a href="case-study.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-150">Case Study</a>
-          <a href="testimonials.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-150">Testimonials</a>
-          <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-gray-100 transition duration-150">Blog</a> <!-- Active Link Style -->
-          <a href="contact.html" class="block w-full text-center mt-3 px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition duration-150">
+          <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">Home</a>
+          <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">Services</a>
+          <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">About</a>
+          <a href="case-study.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">Case Study</a>
+          <a href="testimonials.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">Testimonials</a>
+          <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link text-primary bg-medium">Blog</a> <!-- Active Link Style -->
+          <a href="contact.html" class="block w-full text-center mt-3 px-3 py-2 rounded-md text-base font-medium btn-primary text-white transition duration-150">
             Contact Us
           </a>
+          <!-- Mobile theme toggle will be added here by theme.js -->
         </div>
       </nav>
     </header>
 
     <main>
         <!-- Blog Section -->
-        <section id="blog" class="bg-white py-16 md:py-24 fade-in">
+        <section id="blog" class="bg-section-light py-16 md:py-24 fade-in">
             <div class="container mx-auto px-6">
-              <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center">Our Latest Insights</h1>
-              <p class="text-base sm:text-lg text-gray-600 mb-12 max-w-3xl mx-auto text-center">
+              <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-center" style="color: var(--text-dark);">Our Latest Insights</h1>
+              <p class="text-base sm:text-lg mb-12 max-w-3xl mx-auto text-center" style="color: var(--text-medium);">
                     Dive into our collection of articles covering SEO strategies, industry news, and digital marketing tips.
               </p>
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Blog Post Card 1 -->
-                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col">
-                    <a href="#">
-                        <img src="images/blog-placeholder-1.svg" alt="Keyword Research Guide" class="w-full h-48 sm:h-56 object-cover bg-gray-200">
+                <div class="blog-card">
+                    <a href="blog-keyword-research-guide.html">
+                        <img src="images/blog-placeholder-1.svg" alt="Keyword Research Guide" class="blog-card-image">
                     </a>
-                    <div class="p-4 sm:p-6 flex flex-col flex-grow">
-                        <p class="text-sm text-indigo-600 font-medium mb-2">SEO Fundamentals</p>
-                        <h3 class="text-base sm:text-xl font-semibold text-gray-800 mb-3 flex-grow">
-                            <a href="#" class="hover:text-indigo-700 transition duration-200">The Ultimate Guide to Keyword Research in 2025</a>
+                    <div class="blog-card-content">
+                        <p class="text-sm font-medium mb-2 blog-category">SEO Fundamentals</p>
+                        <h3 class="text-base sm:text-xl font-semibold mb-3 flex-grow blog-card-title">
+                            <a href="blog-keyword-research-guide.html" class="transition duration-200">The Ultimate Guide to Keyword Research in 2025</a>
                         </h3>
-                        <p class="text-gray-600 text-sm mb-4">Discover effective techniques and tools for finding the right keywords to target...</p>
-                        <div class="mt-auto pt-4 border-t border-gray-200 text-sm text-gray-500">
-                            <span>March 28, 2025</span> | <span>5 min read</span>
+                        <p class="blog-card-excerpt text-sm mb-4">Discover effective techniques and tools for finding the right keywords to target and boost your SEO rankings...</p>
+                        <div class="blog-card-footer">
+                            <div class="text-sm blog-card-date">
+                                <span>March 28, 2025</span> | <span>5 min read</span>
+                            </div>
+                            <a href="blog-keyword-research-guide.html" class="text-sm font-medium transition duration-200 blog-read-more">Read More →</a>
                         </div>
                   </div>
                 </div>
 
                 <!-- Blog Post Card 2 -->
-                 <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col">
-                    <a href="#">
-                        <img src="images/blog-placeholder-2.svg" alt="SEO Trends" class="w-full h-48 sm:h-56 object-cover bg-gray-200">
+                <div class="blog-card">
+                    <a href="blog-seo-trends-2025.html">
+                        <img src="images/blog-placeholder-2.svg" alt="SEO Trends" class="blog-card-image">
                     </a>
-                    <div class="p-4 sm:p-6 flex flex-col flex-grow">
-                        <p class="text-sm text-indigo-600 font-medium mb-2">Industry News</p>
-                        <h3 class="text-base sm:text-xl font-semibold text-gray-800 mb-3 flex-grow">
-                            <a href="#" class="hover:text-indigo-700 transition duration-200">Top 5 SEO Trends You Need to Know This Year</a>
+                    <div class="blog-card-content">
+                        <p class="text-sm font-medium mb-2 blog-category">Industry News</p>
+                        <h3 class="text-base sm:text-xl font-semibold mb-3 flex-grow blog-card-title">
+                            <a href="blog-seo-trends-2025.html" class="transition duration-200">Top 5 SEO Trends You Need to Know This Year</a>
                         </h3>
-                        <p class="text-gray-600 text-sm mb-4">Stay ahead of the curve with the latest developments shaping the SEO landscape...</p>
-                        <div class="mt-auto pt-4 border-t border-gray-200 text-sm text-gray-500">
-                            <span>March 20, 2025</span> | <span>7 min read</span>
+                        <p class="blog-card-excerpt text-sm mb-4">Stay ahead of the curve with the latest developments shaping the SEO landscape and digital marketing...</p>
+                        <div class="blog-card-footer">
+                            <div class="text-sm blog-card-date">
+                                <span>March 20, 2025</span> | <span>7 min read</span>
+                            </div>
+                            <a href="blog-seo-trends-2025.html" class="text-sm font-medium transition duration-200 blog-read-more">Read More →</a>
                         </div>
                   </div>
                 </div>
 
                 <!-- Blog Post Card 3 -->
-                 <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200 overflow-hidden flex flex-col">
-                    <a href="#">
-                        <img src="images/blog-placeholder-3.svg" alt="Page Speed Optimization" class="w-full h-48 sm:h-56 object-cover bg-gray-200">
+                <div class="blog-card">
+                    <a href="blog-page-speed-optimization.html">
+                        <img src="images/blog-placeholder-3.svg" alt="Page Speed Optimization" class="blog-card-image">
                     </a>
-                    <div class="p-4 sm:p-6 flex flex-col flex-grow">
-                        <p class="text-sm text-indigo-600 font-medium mb-2">Technical SEO</p>
-                        <h3 class="text-base sm:text-xl font-semibold text-gray-800 mb-3 flex-grow">
-                            <a href="#" class="hover:text-indigo-700 transition duration-200">How to Drastically Improve Your Website's Page Speed</a>
+                    <div class="blog-card-content">
+                        <p class="text-sm font-medium mb-2 blog-category">Technical SEO</p>
+                        <h3 class="text-base sm:text-xl font-semibold mb-3 flex-grow blog-card-title">
+                            <a href="blog-page-speed-optimization.html" class="transition duration-200">How to Drastically Improve Your Website's Page Speed</a>
                         </h3>
-                        <p class="text-gray-600 text-sm mb-4">Learn practical tips to optimize loading times for better user experience and rankings...</p>
-                        <div class="mt-auto pt-4 border-t border-gray-200 text-sm text-gray-500">
-                            <span>March 15, 2025</span> | <span>6 min read</span>
+                        <p class="blog-card-excerpt text-sm mb-4">Learn practical tips to optimize loading times for better user experience and search rankings...</p>
+                        <div class="blog-card-footer">
+                            <div class="text-sm blog-card-date">
+                                <span>March 15, 2025</span> | <span>6 min read</span>
+                            </div>
+                            <a href="blog-page-speed-optimization.html" class="text-sm font-medium transition duration-200 blog-read-more">Read More →</a>
                         </div>
                   </div>
                 </div>
 
                  <!-- Blog Post Card 4 -->
-                 <div class="bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden flex flex-col">
-                  <a href="#">
-                    <img src="images/blog-placeholder-4.svg" alt="Local SEO" class="w-full h-56 object-cover bg-gray-300"> <!-- Placeholder -->
+                <div class="blog-card">
+                  <a href="blog-local-seo-gurgaon.html">
+                    <img src="images/blog-placeholder-4.svg" alt="Local SEO" class="blog-card-image">
                 </a>
-                  <div class="p-6 flex flex-col flex-grow">
-                    <p class="text-sm text-indigo-600 font-medium mb-2">Local SEO</p>
-                      <h3 class="text-xl font-semibold text-gray-800 mb-3 flex-grow">
-                          <a href="#" class="hover:text-indigo-700 transition duration-200">Local SEO: Getting Your Gurgaon Business Found Online</a>
+                  <div class="blog-card-content">
+                    <p class="text-sm font-medium mb-2 blog-category">Local SEO</p>
+                      <h3 class="text-base sm:text-xl font-semibold mb-3 flex-grow blog-card-title">
+                          <a href="blog-local-seo-gurgaon.html" class="transition duration-200">Local SEO: Getting Your Gurgaon Business Found Online</a>
                       </h3>
-                      <p class="text-gray-600 text-sm mb-4">Strategies to boost your visibility in local search results and attract nearby customers...</p>
-                      <div class="mt-auto pt-4 border-t border-gray-200 text-sm text-gray-500">
-                          <span>March 10, 2025</span> | <span>8 min read</span>
-                      </div>
+                      <p class="blog-card-excerpt text-sm mb-4">Strategies to boost your visibility in local search results and attract nearby customers...</p>
+                      <div class="blog-card-footer">
+                            <div class="text-sm blog-card-date">
+                                <span>March 10, 2025</span> | <span>8 min read</span>
+                            </div>
+                            <a href="blog-local-seo-gurgaon.html" class="text-sm font-medium transition duration-200 blog-read-more">Read More →</a>
+                        </div>
                     </div>
                 </div>
                 <!-- Add more blog post cards as needed -->
@@ -149,13 +166,13 @@
           </section>
 
          <!-- Contact CTA Section -->
-        <section id="contact-cta" class="bg-indigo-700 py-16 md:py-20 text-white fade-in">
+        <section id="contact-cta" class="py-16 md:py-20 text-white fade-in" style="background-color: var(--primary-color);">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Need Help with Your SEO Strategy?</h2>
-                <p class="text-base sm:text-lg text-indigo-100 mb-8 max-w-2xl mx-auto">
+                <p class="text-base sm:text-lg mb-8 max-w-2xl mx-auto" style="color: rgba(255, 255, 255, 0.9);">
                     Our experts are ready to assist. Contact us for a free consultation to discuss your specific needs.
                 </p>
-                <a href="contact.html" class="bg-white text-indigo-600 px-6 sm:px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 hover:shadow-xl transition duration-300 transform hover:-translate-y-1 text-base sm:text-lg font-semibold inline-block">
+                <a href="contact.html" class="bg-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 text-base sm:text-lg font-semibold inline-block" style="color: var(--primary-color);">
                     Get Free Consultation
                 </a>
             </div>

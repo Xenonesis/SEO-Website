@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>How to Drastically Improve Your Website's Page Speed | SEO Blog</title>
+    <meta name="description" content="Learn practical tips to optimize loading times for better user experience and search rankings. Complete guide to page speed optimization.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="antialiased fade-in">
+    <!-- Header Section -->
+    <header id="main-header" class="bg-header shadow-md sticky top-0 z-50 transition-all duration-300">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="index.html" class="block group">
+            <img src="images/logo.svg" alt="SEO Solutions Logo" class="h-10 md:h-12 transition-transform duration-300 group-hover:scale-105">
+          </a>
+        </div>
+
+        <!-- Navigation Links for Desktop -->
+        <nav class="hidden md:flex items-center space-x-6 desktop-nav">
+          <a href="index.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">Home</a>
+          <a href="services.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">Services</a>
+          <a href="about.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">About</a>
+          <a href="case-study.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">Case Study</a>
+          <a href="testimonials.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">Testimonials</a>
+          <a href="blog.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-primary pb-1 nav-link">Blog</a>
+          <!-- Theme toggle will be inserted here by theme.js -->
+          <a href="contact.html" class="ml-4 px-6 py-2.5 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-1 hover:shadow-xl btn-primary text-white font-semibold">
+            Contact Us
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button type="button" id="menu-toggle" aria-label="Toggle mobile menu" class="focus:outline-none p-2 rounded-md transition duration-300 menu-toggle-btn">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <nav id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out hidden">
+        <div class="px-4 pt-2 pb-4 space-y-1">
+          <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">Home</a>
+          <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">Services</a>
+          <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">About</a>
+          <a href="case-study.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">Case Study</a>
+          <a href="testimonials.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">Testimonials</a>
+          <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link text-primary bg-medium">Blog</a>
+          <a href="contact.html" class="block w-full text-center mt-3 px-3 py-2 rounded-md text-base font-medium btn-primary text-white transition duration-150">
+            Contact Us
+          </a>
+          <!-- Mobile theme toggle will be added here by theme.js -->
+        </div>
+      </nav>
+    </header>
+
+    <main>
+        <!-- Blog Post Header -->
+        <section class="bg-section-light py-12 md:py-16">
+            <div class="container mx-auto px-6">
+                <!-- Breadcrumb -->
+                <nav class="mb-8">
+                    <ol class="flex items-center space-x-2 text-sm">
+                        <li><a href="index.html" class="text-primary hover:underline">Home</a></li>
+                        <li class="text-medium">/</li>
+                        <li><a href="blog.html" class="text-primary hover:underline">Blog</a></li>
+                        <li class="text-medium">/</li>
+                        <li class="text-medium">Page Speed Optimization</li>
+                    </ol>
+                </nav>
+
+                <!-- Blog Post Meta -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="mb-6">
+                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full blog-category bg-primary-light">Technical SEO</span>
+                    </div>
+
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-dark">
+                        How to Drastically Improve Your Website's Page Speed
+                    </h1>
+
+                    <div class="flex items-center space-x-6 text-sm text-medium mb-8">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>March 15, 2025</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-clock"></i>
+                            <span>6 min read</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-user"></i>
+                            <span>SEO Expert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Image -->
+        <section class="bg-section-light">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <img src="images/blog-placeholder-3.svg" alt="Page Speed Optimization" class="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="bg-section-light py-12 md:py-16">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <article class="prose prose-lg max-w-none">
+                        <div class="blog-content">
+                            <p class="text-lg text-medium mb-6 font-medium">
+                                Page speed is a critical factor for both user experience and search engine rankings. A slow website can cost you visitors, conversions, and search visibility. Here's how to optimize your site for lightning-fast performance.
+                            </p>
+
+                            <h2 class="text-2xl md:text-3xl font-bold text-dark mt-8 mb-4">Why Page Speed Matters</h2>
+                            <p class="text-medium mb-6">
+                                Google has made page speed a ranking factor, and users expect websites to load in under 3 seconds. Studies show that a 1-second delay in page load time can result in a 7% reduction in conversions.
+                            </p>
+
+                            <h2 class="text-2xl md:text-3xl font-bold text-dark mt-8 mb-4">Essential Page Speed Optimization Techniques</h2>
+
+                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">1. Optimize Images</h3>
+                            <p class="text-medium mb-4">
+                                Images often account for the majority of a page's file size. Optimize them by:
+                            </p>
+                            <ul class="list-disc pl-6 text-medium mb-6 space-y-2">
+                                <li>Compressing images without losing quality</li>
+                                <li>Using modern formats like WebP</li>
+                                <li>Implementing lazy loading</li>
+                                <li>Choosing appropriate image dimensions</li>
+                            </ul>
+
+                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">2. Minimize HTTP Requests</h3>
+                            <p class="text-medium mb-4">
+                                Reduce the number of elements on your page that require separate HTTP requests:
+                            </p>
+                            <ul class="list-disc pl-6 text-medium mb-6 space-y-2">
+                                <li>Combine CSS and JavaScript files</li>
+                                <li>Use CSS sprites for small images</li>
+                                <li>Remove unnecessary plugins and widgets</li>
+                                <li>Inline small CSS and JavaScript</li>
+                            </ul>
+
+                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">3. Enable Browser Caching</h3>
+                            <p class="text-medium mb-6">
+                                Browser caching stores static files locally on users' devices, reducing load times for repeat visitors. Configure your server to set appropriate cache headers for different file types.
+                            </p>
+
+                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">4. Use a Content Delivery Network (CDN)</h3>
+                            <p class="text-medium mb-6">
+                                A CDN distributes your content across multiple servers worldwide, serving files from the location closest to your users. This significantly reduces latency and improves load times globally.
+                            </p>
+
+                            <div class="bg-primary-light p-6 rounded-lg mt-8 mb-8">
+                                <h3 class="text-xl font-semibold text-dark mb-3">⚡ Performance Tip</h3>
+                                <p class="text-medium">
+                                    Use tools like Google PageSpeed Insights, GTmetrix, or Pingdom to regularly monitor your site's performance and identify optimization opportunities.
+                                </p>
+                            </div>
+
+                            <h2 class="text-2xl md:text-3xl font-bold text-dark mt-8 mb-4">Advanced Optimization Strategies</h2>
+
+                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">Minify CSS, JavaScript, and HTML</h3>
+                            <p class="text-medium mb-6">
+                                Remove unnecessary characters, whitespace, and comments from your code. This can reduce file sizes by 10-20% without affecting functionality.
+                            </p>
+
+                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">Optimize Server Response Time</h3>
+                            <p class="text-medium mb-6">
+                                Ensure your server responds quickly by optimizing database queries, using efficient hosting, and implementing server-side caching.
+                            </p>
+
+                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">Implement Critical CSS</h3>
+                            <p class="text-medium mb-6">
+                                Load critical CSS inline and defer non-critical styles to prevent render-blocking and improve perceived performance.
+                            </p>
+
+                            <h2 class="text-2xl md:text-3xl font-bold text-dark mt-8 mb-4">Measuring Success</h2>
+                            <p class="text-medium mb-6">
+                                Track your optimization efforts using Core Web Vitals metrics:
+                            </p>
+                            <ul class="list-disc pl-6 text-medium mb-6 space-y-2">
+                                <li><strong>Largest Contentful Paint (LCP):</strong> Should be under 2.5 seconds</li>
+                                <li><strong>First Input Delay (FID):</strong> Should be under 100 milliseconds</li>
+                                <li><strong>Cumulative Layout Shift (CLS):</strong> Should be under 0.1</li>
+                            </ul>
+
+                            <h2 class="text-2xl md:text-3xl font-bold text-dark mt-8 mb-4">Conclusion</h2>
+                            <p class="text-medium mb-6">
+                                Page speed optimization is an ongoing process that requires regular monitoring and adjustment. By implementing these techniques, you'll create a faster, more user-friendly website that ranks better in search results and converts more visitors.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Author Bio -->
+        <section class="bg-section-medium py-8">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-card p-6 rounded-lg shadow-md">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-dark">SEO Expert</h3>
+                                <p class="text-medium">
+                                    Our technical SEO specialists have extensive experience optimizing websites for speed and performance across various industries.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Posts -->
+        <section class="bg-section-light py-12 md:py-16">
+            <div class="container mx-auto px-6">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">Related Articles</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Related Post 1 -->
+                        <div class="blog-card">
+                            <a href="blog-keyword-research-guide.html">
+                                <img src="images/blog-placeholder-1.svg" alt="Keyword Research" class="blog-card-image">
+                            </a>
+                            <div class="blog-card-content">
+                                <p class="text-sm font-medium mb-2 blog-category">SEO Fundamentals</p>
+                                <h3 class="text-lg font-semibold mb-3 blog-card-title">
+                                    <a href="blog-keyword-research-guide.html" class="transition duration-200">The Ultimate Guide to Keyword Research</a>
+                                </h3>
+                                <div class="blog-card-footer">
+                                    <div class="text-sm blog-card-date">
+                                        <span>March 28, 2025</span>
+                                    </div>
+                                    <a href="blog-keyword-research-guide.html" class="text-sm font-medium blog-read-more">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Post 2 -->
+                        <div class="blog-card">
+                            <a href="blog-seo-trends-2025.html">
+                                <img src="images/blog-placeholder-2.svg" alt="SEO Trends" class="blog-card-image">
+                            </a>
+                            <div class="blog-card-content">
+                                <p class="text-sm font-medium mb-2 blog-category">Industry News</p>
+                                <h3 class="text-lg font-semibold mb-3 blog-card-title">
+                                    <a href="blog-seo-trends-2025.html" class="transition duration-200">Top 5 SEO Trends You Need to Know</a>
+                                </h3>
+                                <div class="blog-card-footer">
+                                    <div class="text-sm blog-card-date">
+                                        <span>March 20, 2025</span>
+                                    </div>
+                                    <a href="blog-seo-trends-2025.html" class="text-sm font-medium blog-read-more">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Post 3 -->
+                        <div class="blog-card">
+                            <a href="blog-local-seo-gurgaon.html">
+                                <img src="images/blog-placeholder-4.svg" alt="Local SEO" class="blog-card-image">
+                            </a>
+                            <div class="blog-card-content">
+                                <p class="text-sm font-medium mb-2 blog-category">Local SEO</p>
+                                <h3 class="text-lg font-semibold mb-3 blog-card-title">
+                                    <a href="blog-local-seo-gurgaon.html" class="transition duration-200">Local SEO for Gurgaon Businesses</a>
+                                </h3>
+                                <div class="blog-card-footer">
+                                    <div class="text-sm blog-card-date">
+                                        <span>March 10, 2025</span>
+                                    </div>
+                                    <a href="blog-local-seo-gurgaon.html" class="text-sm font-medium blog-read-more">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-12">
+                        <a href="blog.html" class="btn-primary text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 font-semibold">
+                            View All Articles
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section id="contact-cta" class="py-16 md:py-20 text-white fade-in cta-section">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Need Help Optimizing Your Website?</h2>
+                <p class="text-base sm:text-lg mb-8 max-w-2xl mx-auto cta-text">
+                    Our technical SEO experts can help you achieve lightning-fast page speeds and better search rankings.
+                </p>
+                <a href="contact.html" class="bg-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 text-base sm:text-lg font-semibold inline-block cta-button">
+                    Get Technical SEO Help
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-footer text-footer-text py-12 md:py-16 fade-in">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <div class="mb-6">
+                        <img src="images/logo.svg" alt="SEO Solutions Logo" class="h-10 mb-4">
+                        <p class="text-footer-text-light mb-4">
+                            Leading SEO company in Gurgaon providing comprehensive digital marketing solutions to boost your online presence.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-footer-text-light hover:text-white transition duration-200">Home</a></li>
+                        <li><a href="services.html" class="text-footer-text-light hover:text-white transition duration-200">Services</a></li>
+                        <li><a href="about.html" class="text-footer-text-light hover:text-white transition duration-200">About Us</a></li>
+                        <li><a href="case-study.html" class="text-footer-text-light hover:text-white transition duration-200">Case Studies</a></li>
+                        <li><a href="blog.html" class="text-footer-text-light hover:text-white transition duration-200">Blog</a></li>
+                        <li><a href="contact.html" class="text-footer-text-light hover:text-white transition duration-200">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Our Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#seo" class="text-footer-text-light hover:text-white transition duration-200">SEO Optimization</a></li>
+                        <li><a href="services.html#content" class="text-footer-text-light hover:text-white transition duration-200">Content Marketing</a></li>
+                        <li><a href="services.html#social" class="text-footer-text-light hover:text-white transition duration-200">Social Media</a></li>
+                        <li><a href="services.html#ppc" class="text-footer-text-light hover:text-white transition duration-200">PPC Advertising</a></li>
+                        <li><a href="services.html#analytics" class="text-footer-text-light hover:text-white transition duration-200">Analytics</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Contact Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <span class="text-footer-text-light">Gurgaon, Haryana, India</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-primary"></i>
+                            <span class="text-footer-text-light">+91 98765 43210</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span class="text-footer-text-light">info@seosolutions.com</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="mt-6">
+                        <h4 class="text-white font-medium mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-footer-text-light hover:text-primary transition duration-200" title="Facebook">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="text-footer-text-light hover:text-primary transition duration-200" title="Twitter">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="text-footer-text-light hover:text-primary transition duration-200" title="LinkedIn">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="#" class="text-footer-text-light hover:text-primary transition duration-200" title="Instagram">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-footer-border pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-footer-text-light text-sm mb-4 md:mb-0">
+                        © 2025 SEO Solutions. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="privacy-policy.html" class="text-footer-text-light hover:text-white transition duration-200">Privacy Policy</a>
+                        <a href="terms-conditions.html" class="text-footer-text-light hover:text-white transition duration-200">Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
