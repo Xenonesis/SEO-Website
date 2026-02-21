@@ -43,6 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+
+        // Close menu when clicking outside (optional)
+        document.addEventListener('click', (e) => {
+            if (nav.classList.contains('active') && !nav.contains(e.target) && !menuBtn.contains(e.target)) {
+                nav.classList.remove('active');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                body.classList.remove('no-scroll');
+                
+                const icon = menuBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
     }
 
     // --- Header Scroll Effect ---
@@ -53,8 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', () => {
             if (window.scrollY > scrollThreshold) {
                 header.classList.add('scrolled');
+                header.style.background = 'rgba(10, 10, 10, 0.9)';
+                header.style.backdropFilter = 'blur(10px)';
+                header.style.padding = '0.5rem 0';
             } else {
                 header.classList.remove('scrolled');
+                header.style.background = 'transparent';
+                header.style.backdropFilter = 'none';
+                header.style.padding = '1rem 0';
             }
         }, { passive: true });
     }
@@ -64,60 +85,40 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.registerPlugin(ScrollTrigger);
 
         // Hero Animations
-        const heroTitle = document.querySelector('.hero-title');
-        const heroDesc = document.querySelector('.hero-description');
-        const heroCta = document.querySelector('.hero-cta');
+        const heroTitle = document.querySelector('.hero h1') || document.querySelector('.hero-title');
+        const heroDesc = document.querySelector('.hero p') || document.querySelector('.hero-description');
+        const heroCta = document.querySelector('.hero .btn') || document.querySelector('.hero-cta');
+
+        const tl = gsap.timeline({ defaults: { ease: 'power4.out', duration: 1 } });
 
         if (heroTitle) {
-            gsap.from(heroTitle, {
-                y: 100,
-                opacity: 0,
-                duration: 1,
-                ease: 'power4.out',
-                delay: 0.2
-            });
+            tl.from(heroTitle, { y: 50, opacity: 0, duration: 1.2 });
         }
-
         if (heroDesc) {
-            gsap.from(heroDesc, {
-                y: 50,
-                opacity: 0,
-                duration: 1,
-                ease: 'power4.out',
-                delay: 0.4
-            });
+            tl.from(heroDesc, { y: 30, opacity: 0 }, "-=0.8");
         }
-
         if (heroCta) {
-            gsap.from(heroCta, {
+            tl.from(heroCta, { y: 20, opacity: 0 }, "-=0.8");
+        }
+
+        // Generic Reveal Up Animation
+        const revealElements = document.querySelectorAll('.reveal-up');
+        revealElements.forEach(elem => {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: 'top 85%',
+                    toggleActions: 'play none none reverse'
+                },
                 y: 50,
                 opacity: 0,
-                duration: 1,
-                ease: 'power4.out',
-                delay: 0.6
+                duration: 0.8,
+                ease: 'power2.out'
             });
-        }
+        });
 
-        // Card Animations (Staggered)
-        const cards = document.querySelectorAll('.card');
-        if (cards.length > 0) {
-            gsap.utils.toArray('.card').forEach((card, i) => {
-                gsap.from(card, {
-                    scrollTrigger: {
-                        trigger: card,
-                        start: 'top 85%',
-                    },
-                    y: 50,
-                    opacity: 0,
-                    duration: 0.8,
-                    ease: 'power2.out',
-                    delay: (i % 3) * 0.1 // Stagger based on column position approx
-                });
-            });
-        }
-
-        // Section Title Animations
-        const sectionTitles = document.querySelectorAll('h2');
+        // Section Titles (if not using reveal-up)
+        const sectionTitles = document.querySelectorAll('h2:not(.reveal-up)');
         sectionTitles.forEach(title => {
             gsap.from(title, {
                 scrollTrigger: {
@@ -169,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+            if (targetId === '#' || targetId === '') return;
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {

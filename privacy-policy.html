@@ -3,291 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for SEO Pro - Learn how we collect, use, and protect your personal information when you use our website and services.">
-    <meta name="keywords" content="privacy policy, SEO company privacy, data protection, cookies policy">
-    <meta name="author" content="SEO Pro">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#2563eb">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.seocompany.com/privacy-policy.html">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.seocompany.com/privacy-policy.html">
-    <meta property="og:title" content="Privacy Policy - SEO Pro">
-    <meta property="og:description" content="Privacy Policy for SEO Pro - Learn how we collect, use, and protect your personal information when you use our website and services.">
-    <meta property="og:image" content="https://www.seocompany.com/images/og-image.jpg">
-
-    <title>Privacy Policy - SEO Pro</title>
-
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-
-    <!-- Stylesheets -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Privacy Policy | SEO Agency</title>
+    <meta name="description" content="Privacy Policy for SEO Agency - Learn how we collect, use, and protect your personal information when you use our website and services.">
+    
+    <!-- Modern Design CSS -->
     <link rel="stylesheet" href="css/modern-design.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+
     <!-- Header -->
     <header class="header">
         <div class="container header__container">
-            <a href="index.html" class="logo">
-                <span class="logo__icon"><i class="fas fa-search-dollar"></i></span>
-                <span class="logo__text">SEO<span class="logo__highlight">Pro</span></span>
-            </a>
+            <a href="index.html" class="logo">SEO<span class="text-lime">.</span>AGENCY</a>
             
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="blog.html" class="nav__link">Blog</a></li>
-                    <li class="nav__item"><a href="contact.html" class="btn btn--primary">Contact Us</a></li>
-                </ul>
-            </nav>
-
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <button class="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="case-study.html" class="nav__link">Case Studies</a></li>
+                    <li><a href="blog.html" class="nav__link">Insights</a></li>
+                    <li><a href="contact.html" class="btn btn-primary btn-sm">Let's Talk</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <div class="mobile-menu__header">
-            <a href="index.html" class="logo">
-                <span class="logo__icon"><i class="fas fa-search-dollar"></i></span>
-                <span class="logo__text">SEO<span class="logo__highlight">Pro</span></span>
-            </a>
-            <button class="mobile-menu-close" aria-label="Close menu">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="mobile-menu__list">
-            <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Home</a></li>
-            <li class="mobile-menu__item"><a href="services.html" class="mobile-menu__link">Services</a></li>
-            <li class="mobile-menu__item"><a href="about.html" class="mobile-menu__link">About</a></li>
-            <li class="mobile-menu__item"><a href="blog.html" class="mobile-menu__link">Blog</a></li>
-            <li class="mobile-menu__item"><a href="contact.html" class="mobile-menu__link">Contact Us</a></li>
-        </ul>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero hero--inner">
-        <div class="hero__bg"></div>
-        <div class="container">
-            <div class="hero__content text-center">
-                <span class="hero__tag">Legal Information</span>
-                <h1 class="hero__title">Privacy <span class="text-gradient">Policy</span></h1>
-                <p class="hero__subtitle">Learn how we collect, use, and protect your personal information when you use our website and services.</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="section pt-4 pb-2 bg-secondary">
+            <div class="container text-center">
+                <p class="text-lime uppercase tracking-wide text-sm mb-1">Legal Information</p>
+                <h1 class="mb-2">Privacy <span class="text-purple">Policy</span></h1>
+                <p class="max-w-2xl mx-auto text-secondary">
+                    Learn how we collect, use, and protect your personal information when you use our website and services.
+                </p>
+                <p class="text-sm text-muted">Last updated: June 1, 2025</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Main Content -->
-    <main class="section">
-        <div class="container">
-            <div class="card p-lg">
-                <div class="prose">
-                    <p class="text-muted mb-md">Last updated: June 1, 2023</p>
+        <!-- Main Content -->
+        <section class="section">
+            <div class="container">
+                <div class="max-w-3xl mx-auto">
+                    <div class="card p-4">
+                        <h2>1. Introduction</h2>
+                        <p>SEO Agency ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+                        <p>Please read this Privacy Policy carefully. By accessing or using our website or services, you acknowledge that you have read, understood, and agree to be bound by all the terms outlined in this Privacy Policy.</p>
 
-                    <h2>1. Introduction</h2>
-                    <p>SEO Pro ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
-                    <p>Please read this Privacy Policy carefully. By accessing or using our website or services, you acknowledge that you have read, understood, and agree to be bound by all the terms outlined in this Privacy Policy.</p>
+                        <h2 class="mt-4">2. Information We Collect</h2>
+                        
+                        <h3 class="text-lg text-white mt-2">2.1 Personal Information</h3>
+                        <p>We may collect personal information that you voluntarily provide to us when you:</p>
+                        <ul class="mb-2 pl-4 border-l-2 border-lime">
+                            <li class="mb-1 text-secondary">Fill out forms on our website</li>
+                            <li class="mb-1 text-secondary">Register for an account</li>
+                            <li class="mb-1 text-secondary">Subscribe to our newsletter</li>
+                            <li class="mb-1 text-secondary">Request a consultation</li>
+                            <li class="mb-1 text-secondary">Contact us via email, phone, or other communication channels</li>
+                        </ul>
+                        <p>This information may include your name, email address, phone number, company name, job title, and any other information you choose to provide.</p>
 
-                    <h2>2. Information We Collect</h2>
-                    
-                    <h3>2.1 Personal Information</h3>
-                    <p>We may collect personal information that you voluntarily provide to us when you:</p>
-                    <ul>
-                        <li>Fill out forms on our website</li>
-                        <li>Register for an account</li>
-                        <li>Subscribe to our newsletter</li>
-                        <li>Request a consultation</li>
-                        <li>Contact us via email, phone, or other communication channels</li>
-                    </ul>
-                    <p>This information may include your name, email address, phone number, company name, job title, and any other information you choose to provide.</p>
+                        <h3 class="text-lg text-white mt-2">2.2 Automatically Collected Information</h3>
+                        <p>When you visit our website, we may automatically collect certain information about your device and usage patterns, including:</p>
+                        <ul class="mb-2 pl-4 border-l-2 border-lime">
+                            <li class="mb-1 text-secondary">IP address</li>
+                            <li class="mb-1 text-secondary">Browser type and version</li>
+                            <li class="mb-1 text-secondary">Operating system</li>
+                            <li class="mb-1 text-secondary">Referring website</li>
+                            <li class="mb-1 text-secondary">Pages viewed and time spent on pages</li>
+                            <li class="mb-1 text-secondary">Links clicked</li>
+                            <li class="mb-1 text-secondary">Date and time of access</li>
+                        </ul>
 
-                    <h3>2.2 Automatically Collected Information</h3>
-                    <p>When you visit our website, we may automatically collect certain information about your device and usage patterns, including:</p>
-                    <ul>
-                        <li>IP address</li>
-                        <li>Browser type and version</li>
-                        <li>Operating system</li>
-                        <li>Referring website</li>
-                        <li>Pages viewed and time spent on pages</li>
-                        <li>Links clicked</li>
-                        <li>Date and time of access</li>
-                    </ul>
+                        <h2 class="mt-4">3. How We Use Your Information</h2>
+                        <p>We may use the information we collect for various purposes, including:</p>
+                        <ul class="mb-2 pl-4 border-l-2 border-lime">
+                            <li class="mb-1 text-secondary">Providing, maintaining, and improving our website and services</li>
+                            <li class="mb-1 text-secondary">Processing and fulfilling your requests</li>
+                            <li class="mb-1 text-secondary">Sending you administrative information, such as updates, security alerts, and support messages</li>
+                            <li class="mb-1 text-secondary">Sending marketing communications, newsletters, and promotional materials</li>
+                            <li class="mb-1 text-secondary">Responding to your comments, questions, and requests</li>
+                            <li class="mb-1 text-secondary">Monitoring and analyzing trends, usage, and activities in connection with our website</li>
+                            <li class="mb-1 text-secondary">Detecting, preventing, and addressing technical issues</li>
+                            <li class="mb-1 text-secondary">Protecting the security and integrity of our website and business</li>
+                        </ul>
 
-                    <h2>3. How We Use Your Information</h2>
-                    <p>We may use the information we collect for various purposes, including:</p>
-                    <ul>
-                        <li>Providing, maintaining, and improving our website and services</li>
-                        <li>Processing and fulfilling your requests</li>
-                        <li>Sending you administrative information, such as updates, security alerts, and support messages</li>
-                        <li>Sending marketing communications, newsletters, and promotional materials</li>
-                        <li>Responding to your comments, questions, and requests</li>
-                        <li>Monitoring and analyzing trends, usage, and activities in connection with our website</li>
-                        <li>Detecting, preventing, and addressing technical issues</li>
-                        <li>Protecting the security and integrity of our website and business</li>
-                    </ul>
+                        <h2 class="mt-4">4. Cookies and Similar Technologies</h2>
+                        <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier.</p>
+                        <p>We use the following types of cookies:</p>
+                        <ul class="mb-2 pl-4 border-l-2 border-lime">
+                            <li class="mb-1 text-secondary"><strong class="text-white">Essential cookies:</strong> Necessary for the website to function properly</li>
+                            <li class="mb-1 text-secondary"><strong class="text-white">Analytical/performance cookies:</strong> Allow us to recognize and count visitors and see how they move around our website</li>
+                            <li class="mb-1 text-secondary"><strong class="text-white">Functionality cookies:</strong> Enable us to personalize content and remember your preferences</li>
+                            <li class="mb-1 text-secondary"><strong class="text-white">Targeting cookies:</strong> Record your visit to our website, the pages you visit, and the links you follow</li>
+                        </ul>
+                        <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.</p>
 
-                    <h2>4. Cookies and Similar Technologies</h2>
-                    <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier.</p>
-                    <p>We use the following types of cookies:</p>
-                    <ul>
-                        <li><strong>Essential cookies:</strong> Necessary for the website to function properly</li>
-                        <li><strong>Analytical/performance cookies:</strong> Allow us to recognize and count visitors and see how they move around our website</li>
-                        <li><strong>Functionality cookies:</strong> Enable us to personalize content and remember your preferences</li>
-                        <li><strong>Targeting cookies:</strong> Record your visit to our website, the pages you visit, and the links you follow</li>
-                    </ul>
-                    <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.</p>
+                        <h2 class="mt-4">5. Data Sharing and Disclosure</h2>
+                        <p>We may share your information in the following situations:</p>
+                        <ul class="mb-2 pl-4 border-l-2 border-lime">
+                            <li class="mb-1 text-secondary"><strong class="text-white">With service providers:</strong> We may share your information with third-party vendors, service providers, contractors, or agents who perform services for us.</li>
+                            <li class="mb-1 text-secondary"><strong class="text-white">Business transfers:</strong> If we are involved in a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred as part of that transaction.</li>
+                            <li class="mb-1 text-secondary"><strong class="text-white">Legal requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities.</li>
+                            <li class="mb-1 text-secondary"><strong class="text-white">Protection of rights:</strong> We may disclose your information to protect our rights, privacy, safety, or property, and that of our customers or others.</li>
+                        </ul>
 
-                    <h2>5. Data Sharing and Disclosure</h2>
-                    <p>We may share your information in the following situations:</p>
-                    <ul>
-                        <li><strong>With service providers:</strong> We may share your information with third-party vendors, service providers, contractors, or agents who perform services for us.</li>
-                        <li><strong>Business transfers:</strong> If we are involved in a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred as part of that transaction.</li>
-                        <li><strong>Legal requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities.</li>
-                        <li><strong>Protection of rights:</strong> We may disclose your information to protect our rights, privacy, safety, or property, and that of our customers or others.</li>
-                    </ul>
+                        <h2 class="mt-4">6. Your Rights and Choices</h2>
+                        <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+                        <ul class="mb-2 pl-4 border-l-2 border-lime">
+                            <li class="mb-1 text-secondary">The right to access the personal information we hold about you</li>
+                            <li class="mb-1 text-secondary">The right to request correction of inaccurate personal information</li>
+                            <li class="mb-1 text-secondary">The right to request deletion of your personal information</li>
+                            <li class="mb-1 text-secondary">The right to object to processing of your personal information</li>
+                            <li class="mb-1 text-secondary">The right to data portability</li>
+                            <li class="mb-1 text-secondary">The right to withdraw consent at any time</li>
+                        </ul>
+                        <p>To exercise these rights, please contact us using the information provided in the "Contact Us" section below.</p>
 
-                    <h2>6. Your Rights and Choices</h2>
-                    <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
-                    <ul>
-                        <li>The right to access the personal information we hold about you</li>
-                        <li>The right to request correction of inaccurate personal information</li>
-                        <li>The right to request deletion of your personal information</li>
-                        <li>The right to object to processing of your personal information</li>
-                        <li>The right to data portability</li>
-                        <li>The right to withdraw consent at any time</li>
-                    </ul>
-                    <p>To exercise these rights, please contact us using the information provided in the "Contact Us" section below.</p>
+                        <h2 class="mt-4">7. Data Security</h2>
+                        <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
 
-                    <h2>7. Data Security</h2>
-                    <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+                        <h2 class="mt-4">8. Changes to This Privacy Policy</h2>
+                        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. You are advised to review this Privacy Policy periodically for any changes.</p>
 
-                    <h2>8. Changes to This Privacy Policy</h2>
-                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. You are advised to review this Privacy Policy periodically for any changes.</p>
-
-                    <h2>9. Contact Us</h2>
-                    <p>If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact us at:</p>
-                    
-                    <div class="contact-info-box">
-                        <p class="mb-sm"><strong>SEO Pro</strong></p>
-                        <p class="mb-sm">1234 Main St, Gurgaon, Haryana, India</p>
-                        <p class="mb-sm">Email: <a href="mailto:privacy@seocompany.com">privacy@seocompany.com</a></p>
-                        <p>Phone: <a href="tel:+911234567890">+91 12345 67890</a></p>
+                        <h2 class="mt-4">9. Contact Us</h2>
+                        <p>If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact us at:</p>
+                        
+                        <div class="bg-secondary p-2 border rounded-lg mt-2">
+                            <p class="mb-1"><strong class="text-lime">SEO Agency</strong></p>
+                            <p class="mb-1 text-secondary">DLF Cyber City, Phase 2, Gurgaon, Haryana 122002, India</p>
+                            <p class="mb-1 text-secondary">Email: <a href="mailto:privacy@seo.agency" class="text-lime hover:underline">privacy@seo.agency</a></p>
+                            <p class="mb-0 text-secondary">Phone: <a href="tel:+911234567890" class="hover:text-white">+91 123 456 7890</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col">
-                    <a href="index.html" class="footer__logo">
-                        <span class="logo__icon"><i class="fas fa-search-dollar"></i></span>
-                        <span class="logo__text">SEO<span class="logo__highlight">Pro</span></span>
-                    </a>
-                    <p class="footer__desc">Elevating your digital presence with data-driven SEO strategies that deliver measurable results.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo mb-1 block text-2xl">SEO<span class="text-lime">.</span>AGENCY</a>
+                    <p class="max-w-sm">
+                        Data-driven SEO strategies for forward-thinking brands. We build digital dominance.
+                    </p>
+                    <div class="flex gap-1 mt-2">
+                        <a href="#" class="text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-xl"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
-                <div class="footer__col">
-                    <h3 class="footer__title">Services</h3>
-                    <ul class="footer__links">
-                        <li><a href="services.html#seo">SEO Optimization</a></li>
-                        <li><a href="services.html#content">Content Strategy</a></li>
-                        <li><a href="services.html#technical">Technical SEO</a></li>
-                        <li><a href="services.html#local">Local SEO</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer__col">
-                    <h3 class="footer__title">Company</h3>
-                    <ul class="footer__links">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
                         <li><a href="case-study.html">Case Studies</a></li>
-                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer__col">
-                    <h3 class="footer__title">Contact</h3>
-                    <ul class="footer__contact">
-                        <li><i class="fas fa-map-marker-alt"></i> 1234 Main St, Gurgaon, India</li>
-                        <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-                        <li><i class="fas fa-envelope"></i> info@seopro.com</li>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">SEO Guide</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@seo.agency">hello@seo.agency</a></li>
+                        <li>+91 123 456 7890</li>
+                        <li>Gurgaon, India</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer__bottom">
-                <p>&copy; 2025 SEO Pro. All rights reserved.</p>
-                <div class="footer__legal">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="terms-conditions.html">Terms of Service</a>
-                </div>
+            <div class="mt-4 pt-2 border-t text-center text-muted text-sm">
+                &copy; 2025 SEO Agency. All Rights Reserved. Designed with <span class="text-lime">Code</span>.
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const menuClose = document.querySelector('.mobile-menu-close');
-
-        if (menuToggle && mobileMenu && menuClose) {
-            menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-
-            menuClose.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
-
-        // Animations
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.from('.hero__content', {
-            y: 30,
-            opacity: 0,
-            duration: 1,
-            ease: 'power3.out'
-        });
-
-        gsap.from('.card', {
-            scrollTrigger: {
-                trigger: '.card',
-                start: 'top 80%'
-            },
-            y: 30,
-            opacity: 0,
-            duration: 0.8,
-            ease: 'power2.out'
-        });
-    </script>
+    <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>

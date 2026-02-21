@@ -6,312 +6,296 @@
     <title>How to Drastically Improve Your Website's Page Speed | SEO Blog</title>
     <meta name="description" content="Learn practical tips to optimize loading times for better user experience and search rankings. Complete guide to page speed optimization.">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
+    <!-- Modern Design CSS -->
     <link rel="stylesheet" href="css/modern-design.css">
     
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
-<body class="bg-dark text-light">
+<body>
 
     <!-- Header -->
     <header class="header">
         <div class="container header__container">
-            <a href="index.html" class="logo">
-                <span class="text-primary">SEO</span>Grow
-            </a>
+            <a href="index.html" class="logo">SEO<span class="text-lime">.</span>AGENCY</a>
             
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
             </button>
 
             <nav class="nav">
                 <ul class="nav__list">
                     <li><a href="index.html" class="nav__link">Home</a></li>
                     <li><a href="services.html" class="nav__link">Services</a></li>
-                    <li><a href="about.html" class="nav__link">About</a></li>
                     <li><a href="case-study.html" class="nav__link">Case Studies</a></li>
-                    <li><a href="blog.html" class="nav__link active">Blog</a></li>
-                    <li><a href="contact.html" class="btn btn--primary">Contact Us</a></li>
+                    <li><a href="blog.html" class="nav__link text-lime">Insights</a></li>
+                    <li><a href="contact.html" class="btn btn-primary btn-sm">Let's Talk</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay"></div>
-
-    <!-- Hero Section -->
-    <section class="hero-inner">
-        <div class="container">
-            <div class="hero-inner__content">
-                <div class="breadcrumb mb-2">
-                    <a href="index.html">Home</a> / <a href="blog.html">Blog</a> / <span>Page Speed Optimization</span>
-                </div>
-                <span class="tag mb-2">Technical SEO</span>
-                <h1 class="hero-inner__title">How to Drastically Improve Your Website's Page Speed</h1>
-                <div class="flex items-center gap-2 text-sm text-secondary mt-2">
-                    <span><i class="far fa-calendar-alt"></i> March 15, 2025</span>
-                    <span class="mx-1">•</span>
-                    <span><i class="far fa-clock"></i> 6 min read</span>
-                    <span class="mx-1">•</span>
-                    <span><i class="far fa-user"></i> SEO Expert</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <section class="section">
-        <div class="container">
-            <!-- Featured Image -->
-            <div class="mb-4">
-                <img src="images/blog-placeholder-3.svg" alt="Page Speed Optimization" class="w-full h-auto rounded-lg shadow-lg object-cover" style="max-height: 500px; width: 100%;">
-            </div>
-
-            <!-- Article -->
-            <article class="prose">
-                <p class="lead">
-                    Page speed is a critical factor for both user experience and search engine rankings. A slow website can cost you visitors, conversions, and search visibility. Here's how to optimize your site for lightning-fast performance.
-                </p>
-
-                <h2>Why Page Speed Matters</h2>
-                <p>
-                    Google has made page speed a ranking factor, and users expect websites to load in under 3 seconds. Studies show that a 1-second delay in page load time can result in a 7% reduction in conversions.
-                </p>
-
-                <h2>Essential Page Speed Optimization Techniques</h2>
-
-                <h3>1. Optimize Images</h3>
-                <p>
-                    Images often account for the majority of a page's file size. Optimize them by:
-                </p>
-                <ul>
-                    <li>Compressing images without losing quality</li>
-                    <li>Using modern formats like WebP</li>
-                    <li>Implementing lazy loading</li>
-                    <li>Choosing appropriate image dimensions</li>
-                </ul>
-
-                <h3>2. Minimize HTTP Requests</h3>
-                <p>
-                    Reduce the number of elements on your page that require separate HTTP requests:
-                </p>
-                <ul>
-                    <li>Combine CSS and JavaScript files</li>
-                    <li>Use CSS sprites for small images</li>
-                    <li>Remove unnecessary plugins and widgets</li>
-                    <li>Inline small CSS and JavaScript</li>
-                </ul>
-
-                <h3>3. Enable Browser Caching</h3>
-                <p>
-                    Browser caching stores static files locally on users' devices, reducing load times for repeat visitors. Configure your server to set appropriate cache headers for different file types.
-                </p>
-
-                <h3>4. Use a Content Delivery Network (CDN)</h3>
-                <p>
-                    A CDN distributes your content across multiple servers worldwide, serving files from the location closest to your users. This significantly reduces latency and improves load times globally.
-                </p>
-
-                <blockquote>
-                    <strong>⚡ Performance Tip:</strong> Use tools like Google PageSpeed Insights, GTmetrix, or Pingdom to regularly monitor your site's performance and identify optimization opportunities.
-                </blockquote>
-
-                <h2>Advanced Optimization Strategies</h2>
-
-                <h3>Minify CSS, JavaScript, and HTML</h3>
-                <p>
-                    Remove unnecessary characters, whitespace, and comments from your code. This can reduce file sizes by 10-20% without affecting functionality.
-                </p>
-
-                <h3>Optimize Server Response Time</h3>
-                <p>
-                    Ensure your server responds quickly by optimizing database queries, using efficient hosting, and implementing server-side caching.
-                </p>
-
-                <h3>Implement Critical CSS</h3>
-                <p>
-                    Load critical CSS inline and defer non-critical styles to prevent render-blocking and improve perceived performance.
-                </p>
-
-                <h2>Measuring Success</h2>
-                <p>
-                    Track your optimization efforts using Core Web Vitals metrics:
-                </p>
-                <ul>
-                    <li><strong>Largest Contentful Paint (LCP):</strong> Should be under 2.5 seconds</li>
-                    <li><strong>First Input Delay (FID):</strong> Should be under 100 milliseconds</li>
-                    <li><strong>Cumulative Layout Shift (CLS):</strong> Should be under 0.1</li>
-                </ul>
-
-                <h2>Conclusion</h2>
-                <p>
-                    Page speed optimization is an ongoing process that requires regular monitoring and adjustment. By implementing these techniques, you'll create a faster, more user-friendly website that ranks better in search results and converts more visitors.
-                </p>
-            </article>
-
-            <!-- Author Bio -->
-            <div class="card mt-6 bg-dark-light p-4">
-                <div class="flex items-center gap-2">
-                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-user text-dark text-2xl"></i>
+    <main>
+        <!-- Hero Section -->
+        <section class="section pt-4 pb-2 bg-secondary">
+            <div class="container">
+                <div class="max-w-3xl mx-auto text-center">
+                    <div class="flex justify-center gap-2 text-sm text-secondary mb-2 uppercase tracking-wide reveal-up">
+                        <a href="blog.html" class="hover:text-lime">Blog</a> / 
+                        <span class="text-lime">Technical SEO</span>
                     </div>
-                    <div>
-                        <h4 class="mb-1">SEO Expert</h4>
-                        <p class="text-sm text-secondary mb-0">
-                            Our technical SEO specialists have extensive experience optimizing websites for speed and performance across various industries.
+                    <h1 class="mb-2 reveal-up">How to Drastically Improve Your Website's Page Speed</h1>
+                    <div class="flex justify-center gap-4 text-secondary text-sm reveal-up">
+                        <span><i class="fas fa-calendar-alt mr-1"></i> March 15, 2025</span>
+                        <span><i class="fas fa-clock mr-1"></i> 6 min read</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Image -->
+        <section class="section py-0">
+            <div class="container">
+                <div class="max-w-4xl mx-auto -mt-4 relative z-10 reveal-up">
+                    <div class="bg-accent p-1 border rounded-lg">
+                        <div class="bg-primary aspect-video flex items-center justify-center rounded overflow-hidden relative">
+                             <!-- Placeholder for actual image -->
+                             <div class="absolute inset-0 bg-secondary opacity-20"></div>
+                             <i class="fas fa-bolt fa-5x text-lime opacity-50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="section">
+            <div class="container">
+                <article class="max-w-3xl mx-auto prose">
+                    <p class="text-xl text-secondary mb-4 border-l-4 border-lime pl-4 reveal-up">
+                        Page speed is a critical factor for both user experience and search engine rankings. A slow website can cost you visitors, conversions, and search visibility. Here's how to optimize your site for lightning-fast performance.
+                    </p>
+
+                    <h2 class="reveal-up">Why Page Speed Matters</h2>
+                    <p class="reveal-up">
+                        Google has made page speed a ranking factor, and users expect websites to load in under 3 seconds. Studies show that a 1-second delay in page load time can result in a 7% reduction in conversions.
+                    </p>
+
+                    <h2 class="reveal-up">Essential Page Speed Optimization Techniques</h2>
+
+                    <h3 class="reveal-up">1. Optimize Images</h3>
+                    <p class="reveal-up">
+                        Images often account for the majority of a page's file size. Optimize them by:
+                    </p>
+                    <ul class="mb-4 space-y-2 reveal-up">
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Compressing images without losing quality</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Using modern formats like WebP</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Implementing lazy loading</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Choosing appropriate image dimensions</span></li>
+                    </ul>
+
+                    <h3 class="reveal-up">2. Minimize HTTP Requests</h3>
+                    <p class="reveal-up">
+                        Reduce the number of elements on your page that require separate HTTP requests:
+                    </p>
+                    <ul class="mb-4 space-y-2 reveal-up">
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Combine CSS and JavaScript files</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Use CSS sprites for small images</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Remove unnecessary plugins and widgets</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Inline small CSS and JavaScript</span></li>
+                    </ul>
+
+                    <h3 class="reveal-up">3. Enable Browser Caching</h3>
+                    <p class="reveal-up">
+                        Browser caching stores static files locally on users' devices, reducing load times for repeat visitors. Configure your server to set appropriate cache headers for different file types.
+                    </p>
+
+                    <h3 class="reveal-up">4. Use a Content Delivery Network (CDN)</h3>
+                    <p class="reveal-up">
+                        A CDN distributes your content across multiple servers worldwide, serving files from the location closest to your users. This significantly reduces latency and improves load times globally.
+                    </p>
+
+                    <div class="bg-secondary border-lime border p-4 rounded-lg my-4 relative overflow-hidden reveal-up">
+                        <div class="absolute top-0 right-0 p-4 opacity-10">
+                            <i class="fas fa-tachometer-alt fa-4x text-lime"></i>
+                        </div>
+                        <h3 class="text-lime mb-2"><i class="fas fa-bolt mr-2"></i> Performance Tip</h3>
+                        <p class="mb-0">
+                            Use tools like Google PageSpeed Insights, GTmetrix, or Pingdom to regularly monitor your site's performance and identify optimization opportunities.
                         </p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Related Posts -->
-    <section class="section bg-dark-light">
-        <div class="container">
-            <h2 class="section-title text-center">Related Articles</h2>
-            <div class="grid grid--3 gap-2">
-                <!-- Related Post 1 -->
-                <div class="card">
-                    <div class="card__image-wrapper">
-                        <img src="images/blog-placeholder-1.svg" alt="Keyword Research" class="card__image">
-                        <span class="card__tag">SEO Fundamentals</span>
-                    </div>
-                    <div class="card__content">
-                        <div class="text-sm text-secondary mb-1">March 28, 2025</div>
-                        <h3 class="card__title">The Ultimate Guide to Keyword Research</h3>
-                        <p class="card__description">Discover effective techniques and tools for finding the right keywords to target.</p>
-                        <a href="blog-keyword-research-guide.html" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+                    <h2 class="reveal-up">Advanced Optimization Strategies</h2>
 
-                <!-- Related Post 2 -->
-                <div class="card">
-                    <div class="card__image-wrapper">
-                        <img src="images/blog-placeholder-2.svg" alt="SEO Trends" class="card__image">
-                        <span class="card__tag">Industry News</span>
-                    </div>
-                    <div class="card__content">
-                        <div class="text-sm text-secondary mb-1">March 20, 2025</div>
-                        <h3 class="card__title">Top 5 SEO Trends You Need to Know</h3>
-                        <p class="card__description">Stay ahead of the curve with these emerging SEO trends that will dominate the search landscape.</p>
-                        <a href="blog-seo-trends-2025.html" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Related Post 3 -->
-                <div class="card">
-                    <div class="card__image-wrapper">
-                        <img src="images/blog-placeholder-4.svg" alt="Local SEO" class="card__image">
-                        <span class="card__tag">Local SEO</span>
-                    </div>
-                    <div class="card__content">
-                        <div class="text-sm text-secondary mb-1">March 10, 2025</div>
-                        <h3 class="card__title">Local SEO for Gurgaon Businesses</h3>
-                        <p class="card__description">A comprehensive guide to dominating local search results in the Gurgaon area.</p>
-                        <a href="blog-local-seo-gurgaon.html" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-4">
-                <a href="blog.html" class="btn btn--outline">View All Articles</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section text-center">
-        <div class="container">
-            <div class="bg-gradient p-6 rounded-lg">
-                <h2 class="text-3xl font-bold mb-2 text-dark">Need Help Optimizing Your Website?</h2>
-                <p class="text-dark mb-4 max-w-2xl mx-auto">
-                    Our technical SEO experts can help you achieve lightning-fast page speeds and better search rankings.
-                </p>
-                <a href="contact.html" class="btn btn--primary">Get Technical SEO Help</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col">
-                    <a href="index.html" class="footer__logo">
-                        <span class="text-primary">SEO</span>Grow
-                    </a>
-                    <p class="text-secondary mb-2">
-                        Leading SEO company in Gurgaon providing comprehensive digital marketing solutions to boost your online presence.
+                    <h3 class="reveal-up">Minify CSS, JavaScript, and HTML</h3>
+                    <p class="reveal-up">
+                        Remove unnecessary characters, whitespace, and comments from your code. This can reduce file sizes by 10-20% without affecting functionality.
                     </p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+
+                    <h3 class="reveal-up">Optimize Server Response Time</h3>
+                    <p class="reveal-up">
+                        Ensure your server responds quickly by optimizing database queries, using efficient hosting, and implementing server-side caching.
+                    </p>
+
+                    <h3 class="reveal-up">Implement Critical CSS</h3>
+                    <p class="reveal-up">
+                        Load critical CSS inline and defer non-critical styles to prevent render-blocking and improve perceived performance.
+                    </p>
+
+                    <h2 class="reveal-up">Measuring Success</h2>
+                    <p class="reveal-up">
+                        Track your optimization efforts using Core Web Vitals metrics:
+                    </p>
+                    <ul class="mb-4 space-y-2 reveal-up">
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span><strong>Largest Contentful Paint (LCP):</strong> Should be under 2.5 seconds</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span><strong>First Input Delay (FID):</strong> Should be under 100 milliseconds</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span><strong>Cumulative Layout Shift (CLS):</strong> Should be under 0.1</span></li>
+                    </ul>
+
+                    <h2 class="reveal-up">Conclusion</h2>
+                    <p class="reveal-up">
+                        Page speed optimization is an ongoing process that requires regular monitoring and adjustment. By implementing these techniques, you'll create a faster, more user-friendly website that ranks better in search results and converts more visitors.
+                    </p>
+                </article>
+
+                <!-- Author Bio -->
+                <div class="max-w-3xl mx-auto mt-4 pt-4 border-t reveal-up">
+                    <div class="flex items-center gap-2">
+                        <div class="w-20 h-20 flex-shrink-0 bg-accent rounded-full flex items-center justify-center text-lime text-2xl border">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h3 class="mb-0 text-lg">SEO Expert</h3>
+                            <p class="text-sm mb-0">Our technical SEO specialists have extensive experience optimizing websites for speed and performance across various industries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Posts -->
+        <section class="section bg-secondary">
+            <div class="container">
+                <h2 class="text-center mb-4 reveal-up">Related <span class="text-lime">Articles</span></h2>
+                <div class="grid grid-3">
+                    <!-- Related Post 1 -->
+                    <div class="card reveal-up">
+                        <div class="h-48 bg-accent mb-2 flex items-center justify-center relative overflow-hidden">
+                            <i class="fas fa-search fa-3x text-secondary opacity-50"></i>
+                            <span class="absolute top-2 right-2 bg-primary text-xs px-2 py-1 rounded border">SEO Fundamentals</span>
+                        </div>
+                        <h3>
+                            <a href="blog-keyword-research-guide.html" class="hover:text-lime">The Ultimate Guide to Keyword Research</a>
+                        </h3>
+                        <div class="text-sm text-secondary mb-2">
+                            <span><i class="far fa-calendar mr-1"></i> March 28, 2025</span>
+                        </div>
+                        <a href="blog-keyword-research-guide.html" class="text-lime text-sm font-bold uppercase tracking-wide">Read More -></a>
+                    </div>
+
+                    <!-- Related Post 2 -->
+                    <div class="card reveal-up">
+                        <div class="h-48 bg-accent mb-2 flex items-center justify-center relative overflow-hidden">
+                            <i class="fas fa-chart-line fa-3x text-secondary opacity-50"></i>
+                            <span class="absolute top-2 right-2 bg-primary text-xs px-2 py-1 rounded border">Industry News</span>
+                        </div>
+                        <h3>
+                            <a href="blog-seo-trends-2025.html" class="hover:text-lime">Top 5 SEO Trends You Need to Know</a>
+                        </h3>
+                        <div class="text-sm text-secondary mb-2">
+                            <span><i class="far fa-calendar mr-1"></i> March 20, 2025</span>
+                        </div>
+                        <a href="blog-seo-trends-2025.html" class="text-lime text-sm font-bold uppercase tracking-wide">Read More -></a>
+                    </div>
+
+                    <!-- Related Post 3 -->
+                    <div class="card reveal-up">
+                        <div class="h-48 bg-accent mb-2 flex items-center justify-center relative overflow-hidden">
+                            <i class="fas fa-map-marker-alt fa-3x text-secondary opacity-50"></i>
+                            <span class="absolute top-2 right-2 bg-primary text-xs px-2 py-1 rounded border">Local SEO</span>
+                        </div>
+                        <h3>
+                            <a href="blog-local-seo-gurgaon.html" class="hover:text-lime">Local SEO for Gurgaon Businesses</a>
+                        </h3>
+                        <div class="text-sm text-secondary mb-2">
+                            <span><i class="far fa-calendar mr-1"></i> March 10, 2025</span>
+                        </div>
+                        <a href="blog-local-seo-gurgaon.html" class="text-lime text-sm font-bold uppercase tracking-wide">Read More -></a>
                     </div>
                 </div>
                 
-                <div class="footer__col">
-                    <h4 class="footer__title">Quick Links</h4>
-                    <ul class="footer__links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
+                <div class="text-center mt-4 reveal-up">
+                    <a href="blog.html" class="btn">View All Articles</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section text-center py-4">
+            <div class="container">
+                <h2 class="max-w-3xl mx-auto mb-2 reveal-up">Need Help Optimizing Your <span class="text-purple">Website Speed?</span></h2>
+                <p class="max-w-2xl mx-auto mb-2 reveal-up">Our technical SEO experts can help you achieve lightning-fast page speeds and better search rankings.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg reveal-up">Get Technical SEO Help</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo mb-1 block text-2xl">SEO<span class="text-lime">.</span>AGENCY</a>
+                    <p class="max-w-sm">
+                        Data-driven SEO strategies for forward-thinking brands. We build digital dominance.
+                    </p>
+                    <div class="flex gap-1 mt-2">
+                        <a href="#" class="text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-xl"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
                         <li><a href="case-study.html">Case Studies</a></li>
-                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer__col">
-                    <h4 class="footer__title">Services</h4>
-                    <ul class="footer__links">
-                        <li><a href="services.html">SEO Optimization</a></li>
-                        <li><a href="services.html">Content Marketing</a></li>
-                        <li><a href="services.html">PPC Management</a></li>
-                        <li><a href="services.html">Social Media</a></li>
-                        <li><a href="services.html">Web Design</a></li>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">SEO Guide</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms of Service</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer__col">
-                    <h4 class="footer__title">Contact Us</h4>
-                    <ul class="footer__contact">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Cyber City, Phase 2, Gurgaon, Haryana 122002</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>+91 98765 43210</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>info@seogrow.com</span>
-                        </li>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@seo.agency">hello@seo.agency</a></li>
+                        <li>+91 123 456 7890</li>
+                        <li>Gurgaon, India</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer__bottom">
-                <p>&copy; 2026 SEO Grow. All rights reserved.</p>
+            <div class="mt-4 pt-2 border-t text-center text-muted text-sm">
+                &copy; 2025 SEO Agency. All Rights Reserved. Designed with <span class="text-lime">Code</span>.
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>

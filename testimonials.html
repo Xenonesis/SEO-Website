@@ -16,229 +16,154 @@
 <body>
     <header class="header">
         <div class="container header__container">
-            <a href="index.html" class="logo">
-                <span class="logo__icon"><i class="fas fa-search-dollar"></i></span>
-                <span class="logo__text">SEO<span class="logo__highlight">Pro</span></span>
-            </a>
+            <a href="index.html" class="logo">SEO<span class="text-lime">.</span>AGENCY</a>
             
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="blog.html" class="nav__link">Blog</a></li>
-                    <li class="nav__item"><a href="contact.html" class="btn btn--primary">Contact Us</a></li>
-                </ul>
-            </nav>
-
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <button class="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="case-study.html" class="nav__link">Case Studies</a></li>
+                    <li><a href="blog.html" class="nav__link">Insights</a></li>
+                    <li><a href="contact.html" class="btn btn-primary btn-sm">Let's Talk</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <div class="mobile-menu__header">
-            <a href="index.html" class="logo">
-                <span class="logo__icon"><i class="fas fa-search-dollar"></i></span>
-                <span class="logo__text">SEO<span class="logo__highlight">Pro</span></span>
-            </a>
-            <button class="mobile-menu-close" aria-label="Close menu">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="mobile-menu__list">
-            <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Home</a></li>
-            <li class="mobile-menu__item"><a href="services.html" class="mobile-menu__link">Services</a></li>
-            <li class="mobile-menu__item"><a href="about.html" class="mobile-menu__link">About</a></li>
-            <li class="mobile-menu__item"><a href="blog.html" class="mobile-menu__link">Blog</a></li>
-            <li class="mobile-menu__item"><a href="contact.html" class="mobile-menu__link">Contact Us</a></li>
-        </ul>
-    </div>
-
     <main>
         <!-- Hero Section -->
-        <section class="hero hero--inner">
-            <div class="hero__bg"></div>
-            <div class="container">
-                <div class="hero__content text-center">
-                    <span class="hero__tag">What They Say</span>
-                    <h1 class="hero__title">Client <span class="text-gradient">Stories</span></h1>
-                    <p class="hero__subtitle">Real feedback from businesses in Gurgaon and beyond who have experienced growth with our SEO expertise.</p>
-                </div>
+        <section class="section hero min-h-50vh flex items-center justify-center relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 opacity-20 z-0">
+                <div class="absolute top-0 right-0 w-1/2 h-full bg-accent blur-3xl rounded-full translate-x-1/2 -translate-y-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-1/3 h-1/2 bg-lime blur-3xl rounded-full -translate-x-1/2 translate-y-1/2 opacity-20"></div>
+            </div>
+
+            <div class="container text-center relative z-10">
+                <span class="text-lime font-bold uppercase tracking-wide mb-2 block">What They Say</span>
+                <h1 class="text-5xl font-extrabold mb-4">Client <span class="text-lime">Stories</span></h1>
+                <p class="text-xl text-secondary max-w-2xl mx-auto">
+                    Real feedback from businesses in Gurgaon and beyond who have experienced growth with our SEO expertise.
+                </p>
             </div>
         </section>
 
         <!-- Testimonials Grid -->
         <section class="section">
             <div class="container">
-                <div class="grid grid--3">
+                <div class="grid grid-3 gap-4">
                     <!-- Review 1 -->
                     <article class="card reveal-up">
-                        <div class="card__content">
-                            <div class="flex items-center mb-4">
-                                <img src="images/reviewer1-placeholder.svg" alt="John Doe" class="w-12 h-12 rounded-full mr-4 bg-gray-800">
-                                <div>
-                                    <h4 class="text-lg font-bold">John Doe</h4>
-                                    <p class="text-sm text-lime">CEO, XYZ Corp</p>
-                                </div>
+                        <div class="flex items-center gap-4 mb-2">
+                            <img src="images/reviewer1-placeholder.svg" alt="John Doe" class="w-12 h-12 rounded-full object-cover bg-accent">
+                            <div>
+                                <h4 class="text-lg font-bold">John Doe</h4>
+                                <p class="text-sm text-lime">CEO, XYZ Corp</p>
                             </div>
-                            <blockquote class="card__text italic mb-4">
-                                "Their SEO services have significantly improved our online visibility and brought in more qualified leads than ever before. Highly recommended!"
-                            </blockquote>
-                            <div class="text-lime">★★★★★</div>
                         </div>
+                        <blockquote class="italic mb-2 text-secondary">
+                            "Their SEO services have significantly improved our online visibility and brought in more qualified leads than ever before. Highly recommended!"
+                        </blockquote>
+                        <div class="text-lime">★★★★★</div>
                     </article>
 
                     <!-- Review 2 -->
                     <article class="card reveal-up" style="transition-delay: 0.1s;">
-                        <div class="card__content">
-                            <div class="flex items-center mb-4">
-                                <img src="images/reviewer2-placeholder.svg" alt="Jane Smith" class="w-12 h-12 rounded-full mr-4 bg-gray-800">
-                                <div>
-                                    <h4 class="text-lg font-bold">Jane Smith</h4>
-                                    <p class="text-sm text-lime">Marketing Head, ABC Ltd</p>
-                                </div>
+                        <div class="flex items-center gap-4 mb-2">
+                            <img src="images/reviewer2-placeholder.svg" alt="Jane Smith" class="w-12 h-12 rounded-full object-cover bg-accent">
+                            <div>
+                                <h4 class="text-lg font-bold">Jane Smith</h4>
+                                <p class="text-sm text-lime">Marketing Head, ABC Ltd</p>
                             </div>
-                            <blockquote class="card__text italic mb-4">
-                                "Exceptional SEO service and tangible results. Our organic traffic has doubled since partnering with them. The team is professional and responsive."
-                            </blockquote>
-                            <div class="text-lime">★★★★★</div>
                         </div>
+                        <blockquote class="italic mb-2 text-secondary">
+                            "Exceptional SEO service and tangible results. Our organic traffic has doubled since partnering with them. The team is professional and responsive."
+                        </blockquote>
+                        <div class="text-lime">★★★★★</div>
                     </article>
 
                     <!-- Review 3 -->
                     <article class="card reveal-up" style="transition-delay: 0.2s;">
-                        <div class="card__content">
-                            <div class="flex items-center mb-4">
-                                <img src="images/reviewer3-placeholder.svg" alt="Alice Brown" class="w-12 h-12 rounded-full mr-4 bg-gray-800">
-                                <div>
-                                    <h4 class="text-lg font-bold">Alice Brown</h4>
-                                    <p class="text-sm text-lime">Owner, Small Biz Co.</p>
-                                </div>
+                        <div class="flex items-center gap-4 mb-2">
+                            <img src="images/reviewer3-placeholder.svg" alt="Alice Brown" class="w-12 h-12 rounded-full object-cover bg-accent">
+                            <div>
+                                <h4 class="text-lg font-bold">Alice Brown</h4>
+                                <p class="text-sm text-lime">Owner, Small Biz Co.</p>
                             </div>
-                            <blockquote class="card__text italic mb-4">
-                                "A trustworthy and effective partner for our SEO needs. Our local rankings in Gurgaon have improved dramatically, leading to more walk-in customers."
-                            </blockquote>
-                            <div class="text-lime">★★★★½</div>
                         </div>
+                        <blockquote class="italic mb-2 text-secondary">
+                            "A trustworthy and effective partner for our SEO needs. Our local rankings in Gurgaon have improved dramatically, leading to more walk-in customers."
+                        </blockquote>
+                        <div class="text-lime">★★★★½</div>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="section bg-secondary">
-            <div class="container text-center">
-                <h2 class="h2 mb-4 reveal-up">Experience the <span class="text-lime">Difference</span></h2>
-                <p class="body-text mb-8 reveal-up" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+        <section class="section bg-accent text-center">
+            <div class="container">
+                <h2 class="text-3xl font-bold mb-2 reveal-up">Experience the <span class="text-lime">Difference</span></h2>
+                <p class="text-secondary mb-4 max-w-2xl mx-auto reveal-up">
                     Join our growing list of satisfied clients. Contact us today for a free SEO audit and consultation.
                 </p>
-                <a href="contact.html" class="btn reveal-up">Request Free Audit</a>
+                <a href="contact.html" class="btn btn-primary reveal-up">Request Free Audit</a>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col">
-                    <a href="index.html" class="footer__logo">
-                        <span class="logo__icon"><i class="fas fa-search-dollar"></i></span>
-                        <span class="logo__text">SEO<span class="logo__highlight">Pro</span></span>
-                    </a>
-                    <p class="footer__desc">Elevating your digital presence with data-driven SEO strategies that deliver measurable results.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo mb-1 block text-2xl">SEO<span class="text-lime">.</span>AGENCY</a>
+                    <p class="max-w-sm">
+                        Data-driven SEO strategies for forward-thinking brands. We build digital dominance.
+                    </p>
+                    <div class="flex gap-1 mt-2">
+                        <a href="#" class="text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-xl"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
-                <div class="footer__col">
-                    <h3 class="footer__title">Services</h3>
-                    <ul class="footer__links">
-                        <li><a href="services.html#seo">SEO Optimization</a></li>
-                        <li><a href="services.html#content">Content Strategy</a></li>
-                        <li><a href="services.html#technical">Technical SEO</a></li>
-                        <li><a href="services.html#local">Local SEO</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer__col">
-                    <h3 class="footer__title">Company</h3>
-                    <ul class="footer__links">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
                         <li><a href="case-study.html">Case Studies</a></li>
-                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer__col">
-                    <h3 class="footer__title">Contact</h3>
-                    <ul class="footer__contact">
-                        <li><i class="fas fa-map-marker-alt"></i> 1234 Main St, Gurgaon, India</li>
-                        <li><i class="fas fa-phone"></i> +91 12345 67890</li>
-                        <li><i class="fas fa-envelope"></i> info@seopro.com</li>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">SEO Guide</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@seo.agency">hello@seo.agency</a></li>
+                        <li>+91 123 456 7890</li>
+                        <li>Gurgaon, India</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer__bottom">
-                <p>&copy; 2025 SEO Pro. All rights reserved.</p>
-                <div class="footer__legal">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="terms-conditions.html">Terms of Service</a>
-                </div>
+            <div class="mt-4 pt-2 border-t text-center text-muted text-sm">
+                &copy; 2025 SEO Agency. All Rights Reserved. Designed with <span class="text-lime">Code</span>.
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const menuClose = document.querySelector('.mobile-menu-close');
-
-        if (menuToggle && mobileMenu && menuClose) {
-            menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-
-            menuClose.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
-
-        // GSAP Animations
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Reveal Up
-        gsap.utils.toArray('.reveal-up').forEach(el => {
-            gsap.from(el, {
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 85%",
-                },
-                y: 50,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out"
-            });
-        });
-        
-        // Hero Animations
-        gsap.from('.hero__content', {
-            y: 30,
-            opacity: 0,
-            duration: 1,
-            ease: 'power3.out'
-        });
-    </script>
+    <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>

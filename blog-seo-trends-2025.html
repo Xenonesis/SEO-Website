@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top 5 SEO Trends You Need to Know This Year | SEO Blog</title>
     <meta name="description" content="Stay ahead of the curve with the latest developments shaping the SEO landscape and digital marketing in 2025. Discover the top SEO trends.">
+    
+    <!-- Modern Design CSS -->
     <link rel="stylesheet" href="css/modern-design.css">
+    
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+
+    <!-- Header -->
     <header class="header">
         <div class="container header__container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.svg" alt="SEO Solutions Logo" class="logo__image">
-            </a>
+            <a href="index.html" class="logo">SEO<span class="text-lime">.</span>AGENCY</a>
             
-            <button class="mobile-toggle" aria-label="Toggle menu">
+            <button class="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
 
@@ -26,11 +34,9 @@
                 <ul class="nav__list">
                     <li><a href="index.html" class="nav__link">Home</a></li>
                     <li><a href="services.html" class="nav__link">Services</a></li>
-                    <li><a href="about.html" class="nav__link">About</a></li>
-                    <li><a href="case-study.html" class="nav__link">Case Study</a></li>
-                    <li><a href="testimonials.html" class="nav__link">Testimonials</a></li>
-                    <li><a href="blog.html" class="nav__link nav__link--active">Blog</a></li>
-                    <li><a href="contact.html" class="btn btn--primary">Contact Us</a></li>
+                    <li><a href="case-study.html" class="nav__link">Case Studies</a></li>
+                    <li><a href="blog.html" class="nav__link text-lime">Insights</a></li>
+                    <li><a href="contact.html" class="btn btn-primary btn-sm">Let's Talk</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,287 +44,232 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-inner">
+        <section class="section pt-4 pb-2 bg-secondary">
             <div class="container">
-                <ul class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li><span class="separator">/</span></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><span class="separator">/</span></li>
-                    <li>SEO Trends 2025</li>
-                </ul>
-                <div class="hero-inner__content">
-                    <span class="tag tag--primary mb-1">Industry News</span>
-                    <h1 class="hero-inner__title">Top 5 SEO Trends You Need to Know This Year</h1>
-                    <div class="meta">
-                        <span class="meta__item"><i class="fas fa-calendar-alt"></i> March 20, 2025</span>
-                        <span class="meta__item"><i class="fas fa-clock"></i> 7 min read</span>
-                        <span class="meta__item"><i class="fas fa-user"></i> SEO Expert</span>
+                <div class="max-w-3xl mx-auto text-center">
+                    <div class="flex justify-center gap-2 text-sm text-secondary mb-2 uppercase tracking-wide reveal-up">
+                        <a href="blog.html" class="hover:text-lime">Blog</a> / 
+                        <span class="text-lime">Industry News</span>
+                    </div>
+                    <h1 class="mb-2 reveal-up">Top 5 SEO Trends You Need to Know This Year</h1>
+                    <div class="flex justify-center gap-4 text-secondary text-sm reveal-up">
+                        <span><i class="fas fa-calendar-alt mr-1"></i> March 20, 2025</span>
+                        <span><i class="fas fa-clock mr-1"></i> 7 min read</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Featured Image -->
-        <section class="section section--light pt-0">
+        <section class="section py-0">
             <div class="container">
-                <div class="blog-featured-image">
-                    <img src="images/blog-placeholder-2.svg" alt="SEO Trends 2025">
+                <div class="max-w-4xl mx-auto -mt-4 relative z-10 reveal-up">
+                    <div class="bg-accent p-1 border rounded-lg">
+                        <div class="bg-primary aspect-video flex items-center justify-center rounded overflow-hidden relative">
+                             <!-- Placeholder for actual image -->
+                             <div class="absolute inset-0 bg-secondary opacity-20"></div>
+                             <i class="fas fa-chart-line fa-5x text-lime opacity-50"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Blog Content -->
-        <section class="section section--light">
+        <section class="section">
             <div class="container">
-                <article class="prose">
-                    <p class="lead">
+                <article class="max-w-3xl mx-auto prose">
+                    <p class="text-xl text-secondary mb-4 border-l-4 border-lime pl-4 reveal-up">
                         The SEO landscape is constantly evolving, and 2025 brings exciting new trends that will shape how we approach search engine optimization. Stay ahead of the competition by understanding these key developments.
                     </p>
 
-                    <h2>1. AI-Powered Content Optimization</h2>
-                    <p>
+                    <h2 class="reveal-up">1. AI-Powered Content Optimization</h2>
+                    <p class="reveal-up">
                         Artificial Intelligence is revolutionizing content creation and optimization. Search engines are becoming smarter at understanding context, user intent, and content quality. This means focusing on creating genuinely helpful, comprehensive content rather than keyword stuffing.
                     </p>
 
-                    <h2>2. Voice Search Optimization</h2>
-                    <p>
+                    <h2 class="reveal-up">2. Voice Search Optimization</h2>
+                    <p class="reveal-up">
                         With the increasing popularity of voice assistants, optimizing for voice search has become crucial. This involves targeting conversational keywords and question-based queries that people naturally speak.
                     </p>
-                    <ul>
-                        <li>Focus on long-tail, conversational keywords</li>
-                        <li>Optimize for local search queries</li>
-                        <li>Create FAQ sections to answer common questions</li>
-                        <li>Ensure fast loading times for voice search results</li>
+                    <ul class="mb-4 space-y-2 reveal-up">
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Focus on long-tail, conversational keywords</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Optimize for local search queries</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Create FAQ sections to answer common questions</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Ensure fast loading times for voice search results</span></li>
                     </ul>
 
-                    <h2>3. Core Web Vitals and Page Experience</h2>
-                    <p>
+                    <h2 class="reveal-up">3. Core Web Vitals and Page Experience</h2>
+                    <p class="reveal-up">
                         Google's emphasis on page experience signals continues to grow. Core Web Vitals - measuring loading performance, interactivity, and visual stability - are now critical ranking factors.
                     </p>
 
-                    <h2>4. E-A-T (Expertise, Authoritativeness, Trustworthiness)</h2>
-                    <p>
+                    <h2 class="reveal-up">4. E-A-T (Expertise, Authoritativeness, Trustworthiness)</h2>
+                    <p class="reveal-up">
                         Google's focus on E-A-T has intensified, especially for YMYL (Your Money or Your Life) content. Building authority through expert content, author credentials, and trustworthy sources is more important than ever.
                     </p>
 
-                    <div class="highlight-box">
-                        <h3><i class="fas fa-rocket"></i> Quick Tip</h3>
-                        <p>
+                    <div class="bg-secondary border-lime border p-4 rounded-lg my-4 relative overflow-hidden reveal-up">
+                        <div class="absolute top-0 right-0 p-4 opacity-10">
+                            <i class="fas fa-rocket fa-4x text-lime"></i>
+                        </div>
+                        <h3 class="text-lime mb-2"><i class="fas fa-rocket mr-2"></i> Quick Tip</h3>
+                        <p class="mb-0">
                             Focus on creating content that demonstrates your expertise and builds trust with your audience. This includes author bios, citations, and transparent business information.
                         </p>
                     </div>
 
-                    <h2>5. Video and Visual Search Optimization</h2>
-                    <p>
+                    <h2 class="reveal-up">5. Video and Visual Search Optimization</h2>
+                    <p class="reveal-up">
                         Visual content is becoming increasingly important for SEO. Video content, image optimization, and visual search capabilities are driving new opportunities for visibility.
                     </p>
-                    <ul>
-                        <li>Optimize video content for search engines</li>
-                        <li>Use descriptive alt text for images</li>
-                        <li>Implement structured data for rich snippets</li>
-                        <li>Create visually appealing, shareable content</li>
+                    <ul class="mb-4 space-y-2 reveal-up">
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Optimize video content for search engines</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Use descriptive alt text for images</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Implement structured data for rich snippets</span></li>
+                        <li class="flex items-start gap-2 mb-2"><i class="fas fa-check text-lime mt-1"></i> <span>Create visually appealing, shareable content</span></li>
                     </ul>
 
-                    <h2>Preparing for the Future</h2>
-                    <p>
+                    <h2 class="reveal-up">Preparing for the Future</h2>
+                    <p class="reveal-up">
                         These trends represent the direction SEO is heading in 2025 and beyond. By adapting your strategy to incorporate these elements, you'll be well-positioned to maintain and improve your search rankings.
                     </p>
-                    <p>
+                    <p class="reveal-up">
                         Remember, successful SEO is about creating value for users while following best practices. Focus on user experience, quality content, and technical excellence to succeed in the evolving search landscape.
                     </p>
                 </article>
 
                 <!-- Author Bio -->
-                <div class="author-bio mt-3">
-                    <div class="author-bio__image">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="author-bio__content">
-                        <h3>SEO Expert</h3>
-                        <p>Our team of SEO professionals stays up-to-date with the latest industry trends and algorithm changes to help businesses succeed online.</p>
+                <div class="max-w-3xl mx-auto mt-4 pt-4 border-t reveal-up">
+                    <div class="flex items-center gap-2">
+                        <div class="w-20 h-20 flex-shrink-0 bg-accent rounded-full flex items-center justify-center text-lime text-2xl border">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h3 class="mb-0 text-lg">SEO Expert</h3>
+                            <p class="text-sm mb-0">Our team of SEO professionals stays up-to-date with the latest industry trends and algorithm changes to help businesses succeed online.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Related Posts -->
-        <section class="section section--medium">
+        <section class="section bg-secondary">
             <div class="container">
-                <h2 class="section-title text-center">Related Articles</h2>
-                <div class="grid grid--3 gap-2">
+                <h2 class="text-center mb-4 reveal-up">Related <span class="text-lime">Articles</span></h2>
+                <div class="grid grid-3">
                     <!-- Related Post 1 -->
-                    <div class="card">
-                        <div class="card__image-wrapper">
-                            <img src="images/blog-placeholder-1.svg" alt="Keyword Research" class="card__image">
-                            <span class="card__tag">SEO Fundamentals</span>
+                    <div class="card reveal-up">
+                        <div class="h-48 bg-accent mb-2 flex items-center justify-center relative overflow-hidden">
+                            <i class="fas fa-search fa-3x text-secondary opacity-50"></i>
+                            <span class="absolute top-2 right-2 bg-primary text-xs px-2 py-1 rounded border">SEO Fundamentals</span>
                         </div>
-                        <div class="card__content">
-                            <h3 class="card__title">
-                                <a href="blog-keyword-research-guide.html">The Ultimate Guide to Keyword Research</a>
-                            </h3>
-                            <div class="card__meta">
-                                <span><i class="far fa-calendar"></i> March 28, 2025</span>
-                            </div>
-                            <a href="blog-keyword-research-guide.html" class="btn btn--text">Read More <i class="fas fa-arrow-right"></i></a>
+                        <h3>
+                            <a href="blog-keyword-research-guide.html" class="hover:text-lime">The Ultimate Guide to Keyword Research</a>
+                        </h3>
+                        <div class="text-sm text-secondary mb-2">
+                            <span><i class="far fa-calendar mr-1"></i> March 28, 2025</span>
                         </div>
+                        <a href="blog-keyword-research-guide.html" class="text-lime text-sm font-bold uppercase tracking-wide">Read More -></a>
                     </div>
 
                     <!-- Related Post 2 -->
-                    <div class="card">
-                        <div class="card__image-wrapper">
-                            <img src="images/blog-placeholder-3.svg" alt="Page Speed" class="card__image">
-                            <span class="card__tag">Technical SEO</span>
+                    <div class="card reveal-up">
+                        <div class="h-48 bg-accent mb-2 flex items-center justify-center relative overflow-hidden">
+                            <i class="fas fa-bolt fa-3x text-secondary opacity-50"></i>
+                            <span class="absolute top-2 right-2 bg-primary text-xs px-2 py-1 rounded border">Technical SEO</span>
                         </div>
-                        <div class="card__content">
-                            <h3 class="card__title">
-                                <a href="blog-page-speed-optimization.html">How to Improve Your Website's Page Speed</a>
-                            </h3>
-                            <div class="card__meta">
-                                <span><i class="far fa-calendar"></i> March 15, 2025</span>
-                            </div>
-                            <a href="blog-page-speed-optimization.html" class="btn btn--text">Read More <i class="fas fa-arrow-right"></i></a>
+                        <h3>
+                            <a href="blog-page-speed-optimization.html" class="hover:text-lime">How to Improve Your Website's Page Speed</a>
+                        </h3>
+                        <div class="text-sm text-secondary mb-2">
+                            <span><i class="far fa-calendar mr-1"></i> March 15, 2025</span>
                         </div>
+                        <a href="blog-page-speed-optimization.html" class="text-lime text-sm font-bold uppercase tracking-wide">Read More -></a>
                     </div>
 
                     <!-- Related Post 3 -->
-                    <div class="card">
-                        <div class="card__image-wrapper">
-                            <img src="images/blog-placeholder-4.svg" alt="Local SEO" class="card__image">
-                            <span class="card__tag">Local SEO</span>
+                    <div class="card reveal-up">
+                        <div class="h-48 bg-accent mb-2 flex items-center justify-center relative overflow-hidden">
+                            <i class="fas fa-map-marker-alt fa-3x text-secondary opacity-50"></i>
+                            <span class="absolute top-2 right-2 bg-primary text-xs px-2 py-1 rounded border">Local SEO</span>
                         </div>
-                        <div class="card__content">
-                            <h3 class="card__title">
-                                <a href="blog-local-seo-gurgaon.html">Local SEO for Gurgaon Businesses</a>
-                            </h3>
-                            <div class="card__meta">
-                                <span><i class="far fa-calendar"></i> March 10, 2025</span>
-                            </div>
-                            <a href="blog-local-seo-gurgaon.html" class="btn btn--text">Read More <i class="fas fa-arrow-right"></i></a>
+                        <h3>
+                            <a href="blog-local-seo-gurgaon.html" class="hover:text-lime">Local SEO for Gurgaon Businesses</a>
+                        </h3>
+                        <div class="text-sm text-secondary mb-2">
+                            <span><i class="far fa-calendar mr-1"></i> March 10, 2025</span>
                         </div>
+                        <a href="blog-local-seo-gurgaon.html" class="text-lime text-sm font-bold uppercase tracking-wide">Read More -></a>
                     </div>
                 </div>
                 
-                <div class="text-center mt-3">
-                    <a href="blog.html" class="btn btn--primary">View All Articles</a>
+                <div class="text-center mt-4 reveal-up">
+                    <a href="blog.html" class="btn">View All Articles</a>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="section section--cta">
-            <div class="container text-center">
-                <h2 class="text-white mb-2">Ready to Implement These SEO Trends?</h2>
-                <p class="text-white mb-3 max-w-2">Let our experts help you stay ahead of the competition with cutting-edge SEO strategies.</p>
-                <a href="contact.html" class="btn btn--white">Get Expert Help</a>
+        <section class="section text-center py-4">
+            <div class="container">
+                <h2 class="max-w-3xl mx-auto mb-2 reveal-up">Ready to Implement These <span class="text-purple">SEO Trends?</span></h2>
+                <p class="max-w-2xl mx-auto mb-2 reveal-up">Let our experts help you stay ahead of the competition with cutting-edge SEO strategies.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg reveal-up">Get Expert Help</a>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <div class="grid grid--4 gap-2">
-                <div class="footer__col">
-                    <img src="images/logo.svg" alt="SEO Solutions" class="footer__logo">
-                    <p>Leading SEO company in Gurgaon providing comprehensive digital marketing solutions to boost your online presence.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo mb-1 block text-2xl">SEO<span class="text-lime">.</span>AGENCY</a>
+                    <p class="max-w-sm">
+                        Data-driven SEO strategies for forward-thinking brands. We build digital dominance.
+                    </p>
+                    <div class="flex gap-1 mt-2">
+                        <a href="#" class="text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-xl"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-                <div class="footer__col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer__links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="case-study.html">Case Studies</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer__col">
-                    <h3>Services</h3>
-                    <ul class="footer__links">
-                        <li><a href="services.html#seo">SEO Optimization</a></li>
-                        <li><a href="services.html#content">Content Marketing</a></li>
-                        <li><a href="services.html#ppc">PPC Advertising</a></li>
-                        <li><a href="services.html#social">Social Media</a></li>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">SEO Guide</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms of Service</a></li>
                     </ul>
                 </div>
-                <div class="footer__col">
-                    <h3>Contact Us</h3>
-                    <ul class="footer__contact">
-                        <li><i class="fas fa-map-marker-alt"></i> Sector 45, Gurgaon, India</li>
-                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
-                        <li><i class="fas fa-envelope"></i> info@seosolutions.com</li>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@seo.agency">hello@seo.agency</a></li>
+                        <li>+91 123 456 7890</li>
+                        <li>Gurgaon, India</li>
                     </ul>
                 </div>
             </div>
-            <div class="footer__bottom">
-                <p>&copy; 2025 SEO Solutions. All rights reserved.</p>
+            <div class="mt-4 pt-2 border-t text-center text-muted text-sm">
+                &copy; 2025 SEO Agency. All Rights Reserved. Designed with <span class="text-lime">Code</span>.
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const nav = document.querySelector('.nav');
-        const body = document.querySelector('body');
-
-        if (mobileToggle) {
-            mobileToggle.addEventListener('click', () => {
-                nav.classList.toggle('nav--active');
-                body.classList.toggle('no-scroll');
-                
-                // Toggle icon
-                const icon = mobileToggle.querySelector('i');
-                if (nav.classList.contains('nav--active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            });
-        }
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (nav.classList.contains('nav--active') && !nav.contains(e.target) && !mobileToggle.contains(e.target)) {
-                nav.classList.remove('nav--active');
-                body.classList.remove('no-scroll');
-                const icon = mobileToggle.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-
-        // Animations
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.from('.hero-inner__content', {
-            duration: 1,
-            y: 30,
-            opacity: 0,
-            ease: 'power3.out'
-        });
-
-        gsap.from('.prose', {
-            scrollTrigger: {
-                trigger: '.prose',
-                start: 'top 80%'
-            },
-            duration: 0.8,
-            y: 20,
-            opacity: 0
-        });
-
-        gsap.from('.card', {
-            scrollTrigger: {
-                trigger: '.grid',
-                start: 'top 80%'
-            },
-            duration: 0.8,
-            y: 30,
-            opacity: 0,
-            stagger: 0.2
-        });
-    </script>
+    <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>
