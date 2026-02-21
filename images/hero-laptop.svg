@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0f172a"/>
+  
+  <!-- Background pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grid)" opacity="0.5"/>
+  
+  <!-- Laptop base -->
+  <rect x="150" y="380" width="500" height="20" rx="4" fill="#334155"/>
+  <rect x="250" y="395" width="300" height="8" rx="4" fill="#1e293b"/>
+  
+  <!-- Laptop screen -->
+  <rect x="180" y="120" width="440" height="260" rx="12" fill="#1e293b"/>
+  <rect x="192" y="132" width="416" height="236" rx="8" fill="#0f172a"/>
+  
+  <!-- Screen content - Analytics dashboard mockup -->
+  <rect x="210" y="150" width="180" height="30" rx="4" fill="#22d3ee" opacity="0.8"/>
+  <rect x="210" y="190" width="80" height="60" rx="4" fill="#22d3ee" opacity="0.6"/>
+  <rect x="300" y="190" width="80" height="60" rx="4" fill="#a855f7" opacity="0.6"/>
+  <rect x="390" y="190" width="80" height="60" rx="4" fill="#22d3ee" opacity="0.4"/>
+  
+  <rect x="210" y="260" width="380" height="90" rx="4" fill="#334155" opacity="0.5"/>
+  <!-- Chart bars -->
+  <rect x="230" y="310" width="30" height="30" rx="2" fill="#22d3ee"/>
+  <rect x="275" y="290" width="30" height="50" rx="2" fill="#a855f7"/>
+  <rect x="320" y="300" width="30" height="40" rx="2" fill="#22d3ee"/>
+  <rect x="365" y="280" width="30" height="60" rx="2" fill="#a855f7"/>
+  <rect x="410" y="305" width="30" height="35" rx="2" fill="#22d3ee"/>
+  <rect x="455" y="295" width="30" height="45" rx="2" fill="#a855f7"/>
+  <rect x="500" y="315" width="30" height="25" rx="2" fill="#22d3ee"/>
+  <rect x="545" y="290" width="30" height="50" rx="2" fill="#a855f7"/>
+  
+  <!-- Floating elements -->
+  <circle cx="650" cy="200" r="40" fill="url(#screenGrad)" opacity="0.3"/>
+  <circle cx="100" cy="300" r="25" fill="#22d3ee" opacity="0.2"/>
+  <circle cx="700" cy="400" r="60" fill="#a855f7" opacity="0.15"/>
+  
+  <!-- SEO text overlay -->
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#f8fafc" text-anchor="middle">SEO Analytics Dashboard</text>
+  
+  <!-- Decorative line -->
+  <line x1="300" y1="110" x2="500" y2="110" stroke="url(#screenGrad)" stroke-width="2"/>
+</svg>
