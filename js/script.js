@@ -1,222 +1,183 @@
-// --- Header Scroll Effect ---
-const header = document.getElementById('main-header');
-const scrollThreshold = 50; // Pixels to scroll before changing header
 
-if (header) {
-    const handleScroll = () => {
-        if (window.scrollY > scrollThreshold) {
-            document.body.classList.add('scrolled');
-        } else {
-            document.body.classList.remove('scrolled');
-        }
-    };
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Mobile Menu ---
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    const body = document.body;
 
-    // Initial check in case the page loads already scrolled
-    handleScroll();
+    if (menuBtn && nav) {
+        menuBtn.addEventListener('click', () => {
+            const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle Menu
+            nav.classList.toggle('active');
+            menuBtn.setAttribute('aria-expanded', !isExpanded);
+            body.classList.toggle('no-scroll'); // Prevent body scroll when menu is open
 
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll, { passive: true }); // Use passive listener for performance
-} else {
-    console.warn('Main header element not found for scroll effect.');
-}
+            // Toggle Icon
+            const icon = menuBtn.querySelector('i');
+            if (icon) {
+                if (nav.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+        });
 
-// --- FAQ Accordion ---
-const faqItems = document.querySelectorAll('.bg-gray-50.p-6.rounded-lg.shadow-md'); // Updated selector for FAQ container
-
-faqItems.forEach(item => {
-  const button = item.querySelector('button');
-  // Select the answer div using the faq-content class
-  const answerDiv = item.querySelector('.faq-content');
-  const icon = button ? button.querySelector('svg') : null; // Check if button exists before querying icon
-
-  if (button && answerDiv && icon) { // Ensure all elements exist
-    // Add the class for CSS targeting if it doesn't exist
-    if (!answerDiv.classList.contains('faq-answer')) {
-        answerDiv.classList.add('faq-answer');
+        // Close menu when clicking a link
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                menuBtn.setAttribute('aria-expanded', 'false');
+                body.classList.remove('no-scroll');
+                
+                // Reset icon
+                const icon = menuBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
     }
-    // Ensure initial state matches HTML (hidden)
-    answerDiv.style.maxHeight = '0px';
-    button.setAttribute('aria-expanded', 'false');
 
+    // --- Header Scroll Effect ---
+    const header = document.querySelector('.header');
+    const scrollThreshold = 50;
 
-    button.addEventListener('click', () => {
-      const isOpen = answerDiv.classList.contains('open');
-
-      // Optional: Close other open FAQs
-      faqItems.forEach(otherItem => {
-          if (otherItem !== item) {
-              const otherAnswer = otherItem.querySelector('.faq-answer');
-              const otherButton = otherItem.querySelector('button');
-              if (otherAnswer && otherButton && otherAnswer.classList.contains('open')) {
-                  otherAnswer.classList.remove('open');
-                  otherAnswer.style.maxHeight = '0px'; // Explicitly set max-height for closing
-                  otherButton.setAttribute('aria-expanded', 'false');
-              }
-          }
-      });
-
-      if (isOpen) {
-        answerDiv.classList.remove('open');
-        button.setAttribute('aria-expanded', 'false');
-        answerDiv.style.maxHeight = '0px'; // Set max-height to 0 for closing animation
-      } else {
-        answerDiv.classList.add('open');
-        button.setAttribute('aria-expanded', 'true');
-         // Set max-height dynamically based on scrollHeight for accuracy BEFORE transition starts
-         answerDiv.style.maxHeight = answerDiv.scrollHeight + 'px';
-      }
-    });
-
-     // Reset max-height after transition to allow dynamic height changes if needed
-     answerDiv.addEventListener('transitionend', (event) => {
-        // Ensure the transition is for max-height
-        if (event.propertyName === 'max-height') {
-            if (answerDiv.classList.contains('open')) {
-                // Optional: Remove explicit max-height after opening to allow content reflow if needed
-                // answerDiv.style.maxHeight = 'none';
-            }
-        }
-    });
-  } else {
-      console.warn('FAQ item structure incorrect, skipping:', item);
-  }
-});
-
-// --- Rest of the script (Menu, Scroll, Loader) ---
-
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-
-if (menuToggle && mobileMenu) { // Check if elements exist
-    // Toggle the visibility of the mobile menu on button click
-    menuToggle.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.contains('hidden');
-      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-
-      if (isHidden || !isExpanded) {
-        mobileMenu.classList.remove('hidden');
-        // Delay setting max-height slightly to ensure 'hidden' is removed first
-        requestAnimationFrame(() => {
-            mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
-        });
-        menuToggle.setAttribute('aria-expanded', 'true');
-      } else {
-        mobileMenu.style.maxHeight = '0';
-        menuToggle.setAttribute('aria-expanded', 'false');
-        // Add 'hidden' back after transition completes (handled by transitionend listener)
-      }
-    });
-
-    // Close the mobile menu when clicking outside of it
-    window.addEventListener('click', (event) => {
-      if (
-        mobileMenu.style.maxHeight !== '0px' && // Check if menu is open
-        !menuToggle.contains(event.target) &&
-        !mobileMenu.contains(event.target)
-      ) {
-        mobileMenu.style.maxHeight = '0';
-        menuToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Handle the transition end for mobile menu
-    mobileMenu.addEventListener('transitionend', (event) => {
-        if (event.propertyName === 'max-height') {
-            if (mobileMenu.style.maxHeight === '0px') {
-                mobileMenu.classList.add('hidden');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.add('scrolled');
             } else {
-                 // Optional: Set max-height to 'none' after opening to allow content reflow
-                 // mobileMenu.style.maxHeight = 'none';
+                header.classList.remove('scrolled');
             }
-        }
-    });
+        }, { passive: true });
+    }
 
-    // Close mobile menu on link click
-    mobileMenu.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', () => {
-            if (mobileMenu.style.maxHeight !== '0px') {
-                mobileMenu.style.maxHeight = '0';
-                menuToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
-    });
+    // --- GSAP Animations ---
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
 
-} else {
-    console.warn('Mobile menu toggle or menu element not found.');
-}
+        // Hero Animations
+        const heroTitle = document.querySelector('.hero-title');
+        const heroDesc = document.querySelector('.hero-description');
+        const heroCta = document.querySelector('.hero-cta');
 
-
-// Smooth scrolling for anchor links (applies to all such links)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (event) {
-    const targetId = this.getAttribute('href');
-    // Check if it's more than just '#'
-    if (targetId.length > 1) {
-        const target = document.querySelector(targetId);
-        if (target) {
-            event.preventDefault(); // Prevent default only if target exists
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start' // Or 'center' depending on preference
+        if (heroTitle) {
+            gsap.from(heroTitle, {
+                y: 100,
+                opacity: 0,
+                duration: 1,
+                ease: 'power4.out',
+                delay: 0.2
             });
         }
-    }
-    // Note: Mobile menu closing is handled separately above
-  });
-});
 
-
-// Loading animation (Keep if #loader element exists or will be added)
-window.addEventListener('load', () => {
-  const loader = document.getElementById('loader');
-  if (loader) {
-    // Ensure fade-out class exists in CSS and handles opacity/visibility
-    loader.classList.add('fade-out');
-    // Remove loader from DOM after animation for better performance
-    loader.addEventListener('transitionend', () => {
-        loader.remove();
-    }, { once: true }); // Ensure listener runs only once
-     // Fallback timeout in case transitionend doesn't fire
-    setTimeout(() => {
-        if (document.body.contains(loader)) { // Check if still exists
-             loader.remove();
+        if (heroDesc) {
+            gsap.from(heroDesc, {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: 'power4.out',
+                delay: 0.4
+            });
         }
-    }, 1000); // Slightly longer than animation
-  }
-});
 
-// --- Scroll-Triggered Animations ---
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        if (heroCta) {
+            gsap.from(heroCta, {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: 'power4.out',
+                delay: 0.6
+            });
+        }
 
-    if (!animatedElements.length) {
-        console.log("No elements found with the 'animate-on-scroll' class.");
-        return; // Exit if no elements to animate
+        // Card Animations (Staggered)
+        const cards = document.querySelectorAll('.card');
+        if (cards.length > 0) {
+            gsap.utils.toArray('.card').forEach((card, i) => {
+                gsap.from(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 85%',
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: 'power2.out',
+                    delay: (i % 3) * 0.1 // Stagger based on column position approx
+                });
+            });
+        }
+
+        // Section Title Animations
+        const sectionTitles = document.querySelectorAll('h2');
+        sectionTitles.forEach(title => {
+            gsap.from(title, {
+                scrollTrigger: {
+                    trigger: title,
+                    start: 'top 85%',
+                },
+                y: 30,
+                opacity: 0,
+                duration: 0.8,
+                ease: 'power2.out'
+            });
+        });
     }
 
-    const observerOptions = {
-        root: null, // Use the viewport as the root
-        rootMargin: '0px',
-        threshold: 0.1 // Trigger when 10% of the element is visible
-    };
+    // --- FAQ Accordion ---
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const header = item.querySelector('.faq-header');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
 
-    const observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                // Optional: Unobserve after animation to save resources
-                // observer.unobserve(entry.target);
+        if (header && content) {
+            header.addEventListener('click', () => {
+                const isOpen = content.style.maxHeight;
+
+                // Close all other FAQs
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        const otherContent = otherItem.querySelector('.faq-content');
+                        const otherIcon = otherItem.querySelector('.faq-icon');
+                        if (otherContent) otherContent.style.maxHeight = null;
+                        if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current
+                if (isOpen) {
+                    content.style.maxHeight = null;
+                    if (icon) icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        }
+    });
+
+    // --- Smooth Scroll for Anchor Links ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
-            // Optional: Remove class if element scrolls out of view (for re-animation)
-            // else {
-            //     entry.target.classList.remove('is-visible');
-            // }
         });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    animatedElements.forEach(el => {
-        observer.observe(el);
     });
 });

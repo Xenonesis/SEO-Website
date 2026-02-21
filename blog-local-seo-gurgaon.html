@@ -2,427 +2,325 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local SEO: Getting Your Gurgaon Business Found Online | SEO Blog</title>
     <meta name="description" content="Strategies to boost your visibility in local search results and attract nearby customers. Complete guide to local SEO for Gurgaon businesses.">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="images/favicon.svg">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/modern-design.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="antialiased fade-in">
-    <!-- Header Section -->
-    <header id="main-header" class="bg-header shadow-md sticky top-0 z-50 transition-all duration-300">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-        <!-- Logo -->
-        <div class="flex-shrink-0">
-          <a href="index.html" class="block group">
-            <img src="images/logo.svg" alt="SEO Solutions Logo" class="h-10 md:h-12 transition-transform duration-300 group-hover:scale-105">
-          </a>
-        </div>
+<body class="bg-dark text-light">
 
-        <!-- Navigation Links for Desktop -->
-        <nav class="hidden md:flex items-center space-x-6 desktop-nav">
-          <a href="index.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">Home</a>
-          <a href="services.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">Services</a>
-          <a href="about.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">About</a>
-          <a href="case-study.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">Case Study</a>
-          <a href="testimonials.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-transparent hover:border-primary pb-1 nav-link">Testimonials</a>
-          <a href="blog.html" class="font-medium transition-colors duration-300 hover:text-primary border-b-2 border-primary pb-1 nav-link">Blog</a>
-          <!-- Theme toggle will be inserted here by theme.js -->
-          <a href="contact.html" class="ml-4 px-6 py-2.5 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-1 hover:shadow-xl btn-primary text-white font-semibold">
-            Contact Us
-          </a>
-        </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <span class="text-primary">SEO</span>Grow
+            </a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden flex items-center">
-          <button type="button" id="menu-toggle" aria-label="Toggle mobile menu" class="focus:outline-none p-2 rounded-md transition duration-300 menu-toggle-btn">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-          </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="services.html" class="nav__link">Services</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="case-study.html" class="nav__link">Case Studies</a></li>
+                    <li><a href="blog.html" class="nav__link active">Blog</a></li>
+                    <li><a href="contact.html" class="btn btn--primary">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
-
-      <!-- Mobile Navigation Menu -->
-      <nav id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-500 ease-in-out hidden">
-        <div class="px-4 pt-2 pb-4 space-y-1">
-          <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">Home</a>
-          <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">Services</a>
-          <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">About</a>
-          <a href="case-study.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">Case Study</a>
-          <a href="testimonials.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link">Testimonials</a>
-          <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium transition duration-150 mobile-nav-link text-primary bg-medium">Blog</a>
-          <a href="contact.html" class="block w-full text-center mt-3 px-3 py-2 rounded-md text-base font-medium btn-primary text-white transition duration-150">
-            Contact Us
-          </a>
-          <!-- Mobile theme toggle will be added here by theme.js -->
-        </div>
-      </nav>
     </header>
 
-    <main>
-        <!-- Blog Post Header -->
-        <section class="bg-section-light py-12 md:py-16">
-            <div class="container mx-auto px-6">
-                <!-- Breadcrumb -->
-                <nav class="mb-8">
-                    <ol class="flex items-center space-x-2 text-sm">
-                        <li><a href="index.html" class="text-primary hover:underline">Home</a></li>
-                        <li class="text-medium">/</li>
-                        <li><a href="blog.html" class="text-primary hover:underline">Blog</a></li>
-                        <li class="text-medium">/</li>
-                        <li class="text-medium">Local SEO Gurgaon</li>
-                    </ol>
-                </nav>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
 
-                <!-- Blog Post Meta -->
-                <div class="max-w-4xl mx-auto">
-                    <div class="mb-6">
-                        <span class="inline-block px-3 py-1 text-sm font-medium rounded-full blog-category bg-primary-light">Local SEO</span>
-                    </div>
-
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-dark">
-                        Local SEO: Getting Your Gurgaon Business Found Online
-                    </h1>
-
-                    <div class="flex items-center space-x-6 text-sm text-medium mb-8">
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>March 10, 2025</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-clock"></i>
-                            <span>8 min read</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-user"></i>
-                            <span>SEO Expert</span>
-                        </div>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero-inner">
+        <div class="container">
+            <div class="hero-inner__content">
+                <div class="breadcrumb mb-2">
+                    <a href="index.html">Home</a> / <a href="blog.html">Blog</a> / <span>Local SEO Gurgaon</span>
+                </div>
+                <span class="tag mb-2">Local SEO</span>
+                <h1 class="hero-inner__title">Local SEO: Getting Your Gurgaon Business Found Online</h1>
+                <div class="flex items-center gap-2 text-sm text-secondary mt-2">
+                    <span><i class="far fa-calendar-alt"></i> March 10, 2025</span>
+                    <span class="mx-1">•</span>
+                    <span><i class="far fa-clock"></i> 8 min read</span>
+                    <span class="mx-1">•</span>
+                    <span><i class="far fa-user"></i> SEO Expert</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Featured Image -->
-        <section class="bg-section-light">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto">
-                    <img src="images/blog-placeholder-4.svg" alt="Local SEO Gurgaon" class="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg">
-                </div>
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Featured Image -->
+            <div class="mb-4">
+                <img src="images/blog-placeholder-4.svg" alt="Local SEO Gurgaon" class="w-full h-auto rounded-lg shadow-lg object-cover" style="max-height: 500px; width: 100%;">
             </div>
-        </section>
 
-        <!-- Blog Content -->
-        <section class="bg-section-light py-12 md:py-16">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto">
-                    <article class="prose prose-lg max-w-none">
-                        <div class="blog-content">
-                            <p class="text-lg text-medium mb-6 font-medium">
-                                Local SEO is crucial for businesses in Gurgaon looking to attract nearby customers. With the right strategies, you can dominate local search results and drive more foot traffic to your business.
-                            </p>
-
-                            <h2 class="text-2xl md:text-3xl font-bold text-dark mt-8 mb-4">Why Local SEO Matters for Gurgaon Businesses</h2>
-                            <p class="text-medium mb-6">
-                                Gurgaon is a competitive business hub with thousands of companies vying for local customers. Local SEO helps your business stand out in "near me" searches and Google Maps results, making it easier for potential customers to find you.
-                            </p>
-
-                            <h2 class="text-2xl md:text-3xl font-bold text-dark mt-8 mb-4">Essential Local SEO Strategies</h2>
-
-                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">1. Optimize Your Google My Business Profile</h3>
-                            <p class="text-medium mb-4">
-                                Your Google My Business (GMB) profile is the foundation of local SEO. Ensure it's complete and optimized:
-                            </p>
-                            <ul class="list-disc pl-6 text-medium mb-6 space-y-2">
-                                <li>Add accurate business information (name, address, phone)</li>
-                                <li>Choose the right business categories</li>
-                                <li>Upload high-quality photos of your business</li>
-                                <li>Encourage and respond to customer reviews</li>
-                                <li>Post regular updates and offers</li>
-                            </ul>
-
-                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">2. Target Location-Specific Keywords</h3>
-                            <p class="text-medium mb-4">
-                                Include Gurgaon and nearby area names in your keyword strategy:
-                            </p>
-                            <ul class="list-disc pl-6 text-medium mb-6 space-y-2">
-                                <li>"[Service] in Gurgaon"</li>
-                                <li>"Best [Business Type] Cyber City"</li>
-                                <li>"[Service] near DLF Phase 1"</li>
-                                <li>"Gurgaon [Business Category]"</li>
-                            </ul>
-
-                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">3. Build Local Citations</h3>
-                            <p class="text-medium mb-6">
-                                Ensure your business information is consistent across all online directories and platforms. Focus on popular Indian directories like JustDial, Sulekha, and local Gurgaon business listings.
-                            </p>
-
-                            <div class="bg-primary-light p-6 rounded-lg mt-8 mb-8">
-                                <h3 class="text-xl font-semibold text-dark mb-3">🎯 Local SEO Tip</h3>
-                                <p class="text-medium">
-                                    Create location-specific landing pages for different areas you serve in Gurgaon, such as Cyber City, DLF phases, or Sector-specific pages.
-                                </p>
-                            </div>
-
-                            <h2 class="text-2xl md:text-3xl font-bold text-dark mt-8 mb-4">Advanced Local SEO Techniques</h2>
-
-                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">Schema Markup for Local Business</h3>
-                            <p class="text-medium mb-6">
-                                Implement local business schema markup to help search engines understand your business information better. This can improve your chances of appearing in rich snippets and local pack results.
-                            </p>
-
-                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">Local Link Building</h3>
-                            <p class="text-medium mb-6">
-                                Build relationships with other Gurgaon businesses, local organizations, and community websites. Sponsor local events, participate in business associations, and collaborate with complementary businesses.
-                            </p>
-
-                            <h3 class="text-xl md:text-2xl font-semibold text-dark mt-6 mb-3">Mobile Optimization</h3>
-                            <p class="text-medium mb-6">
-                                Most local searches happen on mobile devices. Ensure your website loads quickly, is mobile-friendly, and provides easy access to your contact information and directions.
-                            </p>
-
-                            <h2 class="text-2xl md:text-3xl font-bold text-dark mt-8 mb-4">Managing Online Reviews</h2>
-                            <p class="text-medium mb-6">
-                                Reviews are crucial for local SEO success. Actively encourage satisfied customers to leave reviews on Google, and respond professionally to all reviews, both positive and negative.
-                            </p>
-                            <ul class="list-disc pl-6 text-medium mb-6 space-y-2">
-                                <li>Ask customers for reviews after positive interactions</li>
-                                <li>Make it easy by providing direct links to review platforms</li>
-                                <li>Respond to all reviews within 24-48 hours</li>
-                                <li>Address negative reviews constructively</li>
-                            </ul>
-
-                            <h2 class="text-2xl md:text-3xl font-bold text-dark mt-8 mb-4">Measuring Local SEO Success</h2>
-                            <p class="text-medium mb-6">
-                                Track your local SEO performance using these key metrics:
-                            </p>
-                            <ul class="list-disc pl-6 text-medium mb-6 space-y-2">
-                                <li>Google My Business insights and views</li>
-                                <li>Local keyword rankings</li>
-                                <li>Website traffic from local searches</li>
-                                <li>Phone calls and direction requests</li>
-                                <li>Online review quantity and ratings</li>
-                            </ul>
-
-                            <h2 class="text-2xl md:text-3xl font-bold text-dark mt-8 mb-4">Conclusion</h2>
-                            <p class="text-medium mb-6">
-                                Local SEO is essential for Gurgaon businesses looking to attract nearby customers. By optimizing your Google My Business profile, targeting location-specific keywords, and building a strong local online presence, you can significantly improve your visibility in local search results.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Author Bio -->
-        <section class="bg-section-medium py-8">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto">
-                    <div class="bg-card p-6 rounded-lg shadow-md">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                                <i class="fas fa-user text-white text-2xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-dark">SEO Expert</h3>
-                                <p class="text-medium">
-                                    Our local SEO specialists have helped hundreds of Gurgaon businesses improve their local search visibility and attract more customers.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Related Posts -->
-        <section class="bg-section-light py-12 md:py-16">
-            <div class="container mx-auto px-6">
-                <div class="max-w-6xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">Related Articles</h2>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- Related Post 1 -->
-                        <div class="blog-card">
-                            <a href="blog-keyword-research-guide.html">
-                                <img src="images/blog-placeholder-1.svg" alt="Keyword Research" class="blog-card-image">
-                            </a>
-                            <div class="blog-card-content">
-                                <p class="text-sm font-medium mb-2 blog-category">SEO Fundamentals</p>
-                                <h3 class="text-lg font-semibold mb-3 blog-card-title">
-                                    <a href="blog-keyword-research-guide.html" class="transition duration-200">The Ultimate Guide to Keyword Research</a>
-                                </h3>
-                                <div class="blog-card-footer">
-                                    <div class="text-sm blog-card-date">
-                                        <span>March 28, 2025</span>
-                                    </div>
-                                    <a href="blog-keyword-research-guide.html" class="text-sm font-medium blog-read-more">Read More →</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Related Post 2 -->
-                        <div class="blog-card">
-                            <a href="blog-seo-trends-2025.html">
-                                <img src="images/blog-placeholder-2.svg" alt="SEO Trends" class="blog-card-image">
-                            </a>
-                            <div class="blog-card-content">
-                                <p class="text-sm font-medium mb-2 blog-category">Industry News</p>
-                                <h3 class="text-lg font-semibold mb-3 blog-card-title">
-                                    <a href="blog-seo-trends-2025.html" class="transition duration-200">Top 5 SEO Trends You Need to Know</a>
-                                </h3>
-                                <div class="blog-card-footer">
-                                    <div class="text-sm blog-card-date">
-                                        <span>March 20, 2025</span>
-                                    </div>
-                                    <a href="blog-seo-trends-2025.html" class="text-sm font-medium blog-read-more">Read More →</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Related Post 3 -->
-                        <div class="blog-card">
-                            <a href="blog-page-speed-optimization.html">
-                                <img src="images/blog-placeholder-3.svg" alt="Page Speed" class="blog-card-image">
-                            </a>
-                            <div class="blog-card-content">
-                                <p class="text-sm font-medium mb-2 blog-category">Technical SEO</p>
-                                <h3 class="text-lg font-semibold mb-3 blog-card-title">
-                                    <a href="blog-page-speed-optimization.html" class="transition duration-200">How to Improve Your Website's Page Speed</a>
-                                </h3>
-                                <div class="blog-card-footer">
-                                    <div class="text-sm blog-card-date">
-                                        <span>March 15, 2025</span>
-                                    </div>
-                                    <a href="blog-page-speed-optimization.html" class="text-sm font-medium blog-read-more">Read More →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-center mt-12">
-                        <a href="blog.html" class="btn-primary text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 font-semibold">
-                            View All Articles
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact CTA Section -->
-        <section id="contact-cta" class="py-16 md:py-20 text-white fade-in cta-section">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Dominate Local Search in Gurgaon?</h2>
-                <p class="text-base sm:text-lg mb-8 max-w-2xl mx-auto cta-text">
-                    Let our local SEO experts help you attract more customers from your area and grow your business.
+            <!-- Article -->
+            <article class="prose">
+                <p class="lead">
+                    Local SEO is crucial for businesses in Gurgaon looking to attract nearby customers. With the right strategies, you can dominate local search results and drive more foot traffic to your business.
                 </p>
-                <a href="contact.html" class="bg-white px-6 sm:px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 text-base sm:text-lg font-semibold inline-block cta-button">
-                    Get Local SEO Help
-                </a>
-            </div>
-        </section>
-    </main>
 
-    <!-- Footer Section -->
-    <footer class="bg-footer text-footer-text py-12 md:py-16 fade-in">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-                <!-- Company Info -->
-                <div class="lg:col-span-1">
-                    <div class="mb-6">
-                        <img src="images/logo.svg" alt="SEO Solutions Logo" class="h-10 mb-4">
-                        <p class="text-footer-text-light mb-4">
-                            Leading SEO company in Gurgaon providing comprehensive digital marketing solutions to boost your online presence.
+                <h2>Why Local SEO Matters for Gurgaon Businesses</h2>
+                <p>
+                    Gurgaon is a competitive business hub with thousands of companies vying for local customers. Local SEO helps your business stand out in "near me" searches and Google Maps results, making it easier for potential customers to find you.
+                </p>
+
+                <h2>Essential Local SEO Strategies</h2>
+
+                <h3>1. Optimize Your Google My Business Profile</h3>
+                <p>
+                    Your Google My Business (GMB) profile is the foundation of local SEO. Ensure it's complete and optimized:
+                </p>
+                <ul>
+                    <li>Add accurate business information (name, address, phone)</li>
+                    <li>Choose the right business categories</li>
+                    <li>Upload high-quality photos of your business</li>
+                    <li>Encourage and respond to customer reviews</li>
+                    <li>Post regular updates and offers</li>
+                </ul>
+
+                <h3>2. Target Location-Specific Keywords</h3>
+                <p>
+                    Include Gurgaon and nearby area names in your keyword strategy:
+                </p>
+                <ul>
+                    <li>"[Service] in Gurgaon"</li>
+                    <li>"Best [Business Type] Cyber City"</li>
+                    <li>"[Service] near DLF Phase 1"</li>
+                    <li>"Gurgaon [Business Category]"</li>
+                </ul>
+
+                <h3>3. Build Local Citations</h3>
+                <p>
+                    Ensure your business information is consistent across all online directories and platforms. Focus on popular Indian directories like JustDial, Sulekha, and local Gurgaon business listings.
+                </p>
+
+                <blockquote>
+                    <strong>🎯 Local SEO Tip:</strong> Create location-specific landing pages for different areas you serve in Gurgaon, such as Cyber City, DLF phases, or Sector-specific pages.
+                </blockquote>
+
+                <h2>Advanced Local SEO Techniques</h2>
+
+                <h3>Schema Markup for Local Business</h3>
+                <p>
+                    Implement local business schema markup to help search engines understand your business information better. This can improve your chances of appearing in rich snippets and local pack results.
+                </p>
+
+                <h3>Local Link Building</h3>
+                <p>
+                    Build relationships with other Gurgaon businesses, local organizations, and community websites. Sponsor local events, participate in business associations, and collaborate with complementary businesses.
+                </p>
+
+                <h3>Mobile Optimization</h3>
+                <p>
+                    Most local searches happen on mobile devices. Ensure your website loads quickly, is mobile-friendly, and provides easy access to your contact information and directions.
+                </p>
+
+                <h2>Managing Online Reviews</h2>
+                <p>
+                    Reviews are crucial for local SEO success. Actively encourage satisfied customers to leave reviews on Google, and respond professionally to all reviews, both positive and negative.
+                </p>
+                <ul>
+                    <li>Ask customers for reviews after positive interactions</li>
+                    <li>Make it easy by providing direct links to review platforms</li>
+                    <li>Respond to all reviews within 24-48 hours</li>
+                    <li>Address negative reviews constructively</li>
+                </ul>
+
+                <h2>Measuring Local SEO Success</h2>
+                <p>
+                    Track your local SEO performance using these key metrics:
+                </p>
+                <ul>
+                    <li>Google My Business insights and views</li>
+                    <li>Local keyword rankings</li>
+                    <li>Website traffic from local searches</li>
+                    <li>Phone calls and direction requests</li>
+                    <li>Online review quantity and ratings</li>
+                </ul>
+
+                <h2>Conclusion</h2>
+                <p>
+                    Local SEO is essential for Gurgaon businesses looking to attract nearby customers. By optimizing your Google My Business profile, targeting location-specific keywords, and building a strong local online presence, you can significantly improve your visibility in local search results.
+                </p>
+            </article>
+
+            <!-- Author Bio -->
+            <div class="card mt-6 bg-dark-light p-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-user text-dark text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="mb-1">SEO Expert</h4>
+                        <p class="text-sm text-secondary mb-0">
+                            Our local SEO specialists have helped hundreds of Gurgaon businesses improve their local search visibility and attract more customers.
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-footer-text-light hover:text-white transition duration-200">Home</a></li>
-                        <li><a href="services.html" class="text-footer-text-light hover:text-white transition duration-200">Services</a></li>
-                        <li><a href="about.html" class="text-footer-text-light hover:text-white transition duration-200">About Us</a></li>
-                        <li><a href="case-study.html" class="text-footer-text-light hover:text-white transition duration-200">Case Studies</a></li>
-                        <li><a href="blog.html" class="text-footer-text-light hover:text-white transition duration-200">Blog</a></li>
-                        <li><a href="contact.html" class="text-footer-text-light hover:text-white transition duration-200">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Services -->
-                <div>
-                    <h3 class="text-lg font-semibold text-white mb-4">Our Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="services.html#seo" class="text-footer-text-light hover:text-white transition duration-200">SEO Optimization</a></li>
-                        <li><a href="services.html#content" class="text-footer-text-light hover:text-white transition duration-200">Content Marketing</a></li>
-                        <li><a href="services.html#social" class="text-footer-text-light hover:text-white transition duration-200">Social Media</a></li>
-                        <li><a href="services.html#ppc" class="text-footer-text-light hover:text-white transition duration-200">PPC Advertising</a></li>
-                        <li><a href="services.html#analytics" class="text-footer-text-light hover:text-white transition duration-200">Analytics</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-lg font-semibold text-white mb-4">Contact Info</h3>
-                    <div class="space-y-3">
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
-                            <span class="text-footer-text-light">Gurgaon, Haryana, India</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-phone text-primary"></i>
-                            <span class="text-footer-text-light">+91 98765 43210</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-envelope text-primary"></i>
-                            <span class="text-footer-text-light">info@seosolutions.com</span>
-                        </div>
+    <!-- Related Posts -->
+    <section class="section bg-dark-light">
+        <div class="container">
+            <h2 class="section-title text-center">Related Articles</h2>
+            <div class="grid grid--3 gap-2">
+                <!-- Related Post 1 -->
+                <div class="card">
+                    <div class="card__image-wrapper">
+                        <img src="images/blog-placeholder-1.svg" alt="Keyword Research" class="card__image">
+                        <span class="card__tag">SEO Fundamentals</span>
                     </div>
+                    <div class="card__content">
+                        <div class="text-sm text-secondary mb-1">March 28, 2025</div>
+                        <h3 class="card__title">The Ultimate Guide to Keyword Research</h3>
+                        <p class="card__description">Discover effective techniques and tools for finding the right keywords to target.</p>
+                        <a href="blog-keyword-research-guide.html" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
 
-                    <!-- Social Media Links -->
-                    <div class="mt-6">
-                        <h4 class="text-white font-medium mb-3">Follow Us</h4>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-footer-text-light hover:text-primary transition duration-200" title="Facebook">
-                                <i class="fab fa-facebook-f text-xl"></i>
-                            </a>
-                            <a href="#" class="text-footer-text-light hover:text-primary transition duration-200" title="Twitter">
-                                <i class="fab fa-twitter text-xl"></i>
-                            </a>
-                            <a href="#" class="text-footer-text-light hover:text-primary transition duration-200" title="LinkedIn">
-                                <i class="fab fa-linkedin-in text-xl"></i>
-                            </a>
-                            <a href="#" class="text-footer-text-light hover:text-primary transition duration-200" title="Instagram">
-                                <i class="fab fa-instagram text-xl"></i>
-                            </a>
-                        </div>
+                <!-- Related Post 2 -->
+                <div class="card">
+                    <div class="card__image-wrapper">
+                        <img src="images/blog-placeholder-2.svg" alt="SEO Trends" class="card__image">
+                        <span class="card__tag">Industry News</span>
+                    </div>
+                    <div class="card__content">
+                        <div class="text-sm text-secondary mb-1">March 20, 2025</div>
+                        <h3 class="card__title">Top 5 SEO Trends You Need to Know</h3>
+                        <p class="card__description">Stay ahead of the curve with these emerging SEO trends that will dominate the search landscape.</p>
+                        <a href="blog-seo-trends-2025.html" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Related Post 3 -->
+                <div class="card">
+                    <div class="card__image-wrapper">
+                        <img src="images/blog-placeholder-3.svg" alt="Page Speed" class="card__image">
+                        <span class="card__tag">Technical SEO</span>
+                    </div>
+                    <div class="card__content">
+                        <div class="text-sm text-secondary mb-1">March 15, 2025</div>
+                        <h3 class="card__title">How to Improve Your Website's Page Speed</h3>
+                        <p class="card__description">Learn practical tips to optimize your site's performance and core web vitals.</p>
+                        <a href="blog-page-speed-optimization.html" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
+            
+            <div class="text-center mt-4">
+                <a href="blog.html" class="btn btn--outline">View All Articles</a>
+            </div>
+        </div>
+    </section>
 
-            <!-- Bottom Footer -->
-            <div class="border-t border-footer-border pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-footer-text-light text-sm mb-4 md:mb-0">
-                        © 2025 SEO Solutions. All rights reserved.
+    <!-- CTA Section -->
+    <section class="section text-center">
+        <div class="container">
+            <div class="bg-gradient p-6 rounded-lg">
+                <h2 class="text-3xl font-bold mb-2 text-dark">Need Help with Your SEO Strategy?</h2>
+                <p class="text-dark mb-4 max-w-2xl mx-auto">
+                    Our experts are ready to assist. Contact us for a free consultation to discuss your specific needs.
+                </p>
+                <a href="contact.html" class="btn btn--primary">Get Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <a href="index.html" class="footer__logo">
+                        <span class="text-primary">SEO</span>Grow
+                    </a>
+                    <p class="text-secondary mb-2">
+                        Leading SEO company in Gurgaon providing comprehensive digital marketing solutions to boost your online presence.
                     </p>
-                    <div class="flex space-x-6 text-sm">
-                        <a href="privacy-policy.html" class="text-footer-text-light hover:text-white transition duration-200">Privacy Policy</a>
-                        <a href="terms-conditions.html" class="text-footer-text-light hover:text-white transition duration-200">Terms & Conditions</a>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+                
+                <div class="footer__col">
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-study.html">Case Studies</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h4 class="footer__title">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="services.html">SEO Optimization</a></li>
+                        <li><a href="services.html">Content Marketing</a></li>
+                        <li><a href="services.html">PPC Management</a></li>
+                        <li><a href="services.html">Social Media</a></li>
+                        <li><a href="services.html">Web Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact Us</h4>
+                    <ul class="footer__contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Cyber City, Phase 2, Gurgaon, Haryana 122002</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@seogrow.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2026 SEO Grow. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/theme.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
